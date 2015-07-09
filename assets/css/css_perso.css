@@ -39,13 +39,6 @@ body { padding-top: 40px; }
     color: #000;
 }
 
-table{
-    border: 2px solid;
-}
-
-table td{    
-    vertical-align: middle;
-}
 
 .ligne_couleur_alterne tr:nth-child(even) {background: #d8e4ff;}
 
@@ -84,8 +77,12 @@ table td{
 }
 
 .titre { 
+    background: url(images/DarkHeresy-Banner.jpg);
+    background-size:   cover;                
+    background-repeat: no-repeat;
+    background-position: center center; 
+    width: 100%;
     text-align: center;
-    color: #000d43; 
     font-family:Time new roman; 
     font-size: 45px; 
     font-weight: normal; 
@@ -96,6 +93,9 @@ table td{
     padding-top: 10px;
     background-color: #e3efff;
     border-radius: 10px;
+    color: #fff; 
+    text-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red; 
+    font: 80px 'BlackJackRegular';
 }
 
 body {
@@ -109,12 +109,14 @@ body {
  
 
 .container {
+    background:url(images/paper-background-2-Cool-Backgrounds.jpg) repeat-y;
     margin-top: 50px;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 10px;
     background-color: white;
-    box-shadow: 0px 0px 10px 2px #9a9a9a;
+    /*box-shadow: 0px 0px 10px 2px #9a9a9a;*/
+    box-shadow: 0px -1px 4px white, 0px -2px 10px yellow, 0px -10px 20px #ff8000, 0px -18px 40px red; 
     border-radius: 4px;
     min-height: 85vh;
     width: 1170px;
