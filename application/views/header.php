@@ -37,7 +37,6 @@
                 <div class="collapse navbar-collapse">
                     <ul id="navbar_content_left" class="nav navbar-nav">
                         <li><a href="<?php echo base_url()."index.php/home/creerArchetype"; ?>"><span class="glyphicon glyphicon-list"></span> Creer un archetype</a></li>
-                        <li><a href="<?php echo base_url()."index.php/encounter"; ?>"><span class="glyphicon glyphicon-list"></span> Encounter</a></li>
                     </ul>
                 </div>
             </div>

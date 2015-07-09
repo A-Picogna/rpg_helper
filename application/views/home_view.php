@@ -1,5 +1,11 @@
 <script>
-    $(document).ready( function () {$('#table_id').DataTable();} );
+    $(document).ready( function () {
+        $('#table_id').DataTable({
+            scrollY: 500,
+            paging: false,
+            scrollX: false
+        });
+    } );
     $(function(){$(".tooltip-link").tooltip();});
     $(document).ready(function(){
         var user_data;
@@ -32,8 +38,7 @@
             $("select[name='FS']").val(user_data["FS"]);
         });
     });
-    $(document).ready(function(){
-    });
+
 </script>
 <div class="row">
     <div class="">
@@ -48,8 +53,8 @@
                         <th>F</th>
                         <th>E</th>
                         <th>Ag</th>
-                        <th>Per</th>
                         <th>Int</th>
+                        <th>Per</th>
                         <th>FM</th>
                         <th>Soc</th>
                         <th>PV</th>
@@ -79,8 +84,8 @@
                             }
                             echo '</td>';
                             echo '<td>'.$val['Ag'].'</td>';
-                            echo '<td>'.$val['Per'].'</td>';
                             echo '<td>'.$val['Int'].'</td>';
+                            echo '<td>'.$val['Per'].'</td>';
                             echo '<td>'.$val['FM'].'</td>';
                             echo '<td>'.$val['Soc'].'</td>';
                             echo '<td class="text-red">'.$val['PV'].'</td>';
@@ -92,7 +97,7 @@
                             echo $val['PA_jd'].'/';
                             echo $val['PA_jg'];
                             echo '</td>';
-                            echo '<td>'.form_dropdown($key, $options, 0,'class="form-control input-sm"').'</td>';
+                            echo '<td>'.form_dropdown($key, $options, 0,'class=""').'</td>';
                             echo '  <td>
                                         <a href="#"
                                         class="link tooltip-link"
@@ -167,12 +172,12 @@
                                 echo form_input('Ag', '', 'class="form-control" placeholder="" ');
                             echo '</div>';
                             echo '<div class="form-group">';
-                                echo form_label('Perception :', 'Per');
-                                echo form_input('Per', '', 'class="form-control" placeholder="" ');
-                            echo '</div>';
-                            echo '<div class="form-group">';
                                 echo form_label('Intelligence :', 'Int');
                                 echo form_input('Int', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Perception :', 'Per');
+                                echo form_input('Per', '', 'class="form-control" placeholder="" ');
                             echo '</div>';
                             echo '<div class="form-group">';
                                 echo form_label('Force mentale :', 'FM');

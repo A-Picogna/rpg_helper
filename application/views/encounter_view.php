@@ -14,8 +14,8 @@ foreach ($listeEncounter as $l){
                     <td>F</td>
                     <td>E</td>
                     <td>Ag</td>
-                    <td>Per</td>
                     <td>Int</td>
+                    <td>Per</td>
                     <td>FM</td>
                     <td>Soc</td>
                     <td>BF</td>
@@ -28,8 +28,8 @@ foreach ($listeEncounter as $l){
                     <td>'.$l['F'].'</td>
                     <td>'.$l['E'].'</td>
                     <td>'.$l['Ag'].'</td>
-                    <td>'.$l['Per'].'</td>
                     <td>'.$l['Int'].'</td>
+                    <td>'.$l['Per'].'</td>
                     <td>'.$l['FM'].'</td>
                     <td>'.$l['Soc'].'</td>
                     <td>'.floor(($l['F']/10)*($l['FS'])).'</td>
@@ -57,10 +57,10 @@ foreach ($listeEncounter as $l){
                     <td><input type="number" class="form-control" name="pen" value="0" min="0" max="200"></td>
                     <td>
                         <select name="loca" class = "form-control">
+                            <option value="PA_corps">Corps</option>
                             <option value="PA_tete">Tete</option>
                             <option value="PA_bd">Bras droit</option>
                             <option value="PA_bg">Bras gauche</option>
-                            <option value="PA_corps">Corps</option>
                             <option value="PA_jd">Jambe droite</option>
                             <option value="PA_jg">Jambe gauche</option>
                         </select>
@@ -86,7 +86,7 @@ foreach ($listeEncounter as $l){
 $listePersonnages = json_encode($listePersonnages);
 ?>
 </div>
-<a href="<?php echo base_url();?>index.php/home"><button class="btn btn-lg btn-danger pull-right">Fin de la rencontre</button></a>
+<a href="#"><button class="btn btn-lg btn-danger pull-right">Fin de la rencontre</button></a>
 <button class="btn btn-lg btn-success" onClick="majPV()">Calculs</button>
             
 <script type="text/javascript">

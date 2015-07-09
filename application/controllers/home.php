@@ -8,11 +8,10 @@ class Home extends CI_Controller {
     }
     
 	public function index(){
-        session_destroy();
         $data['listeArchetype'] = $this->Personnage->getListeArchetype();
-		$this->load->view('header');
-		$this->load->view('home_view', $data);        
-		$this->load->view('footer');
+        $this->load->view('header');
+        $this->load->view('home_view', $data);        
+        $this->load->view('footer');
 	}
     
     public function creerArchetype(){
@@ -24,6 +23,15 @@ class Home extends CI_Controller {
     public function supprimerArchetype($nom){
         $this->Personnage->supprimerArchetype($nom);
         redirect('home', 'refresh');
+    }
+    
+    public function finRencontre(){
+        $this->session->unset_userdata('encounter');
+        session_destroy();
+        $data['listeArchetype'] = $this->Personnage->getListeArchetype();
+        $this->load->view('header');
+        $this->load->view('home_view', $data);        
+        $this->load->view('footer');
     }
 }
 

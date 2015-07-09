@@ -16,6 +16,7 @@ class Encounter extends CI_Controller {
                 $listeCombat[$key]["nbGen"] = $this->input->post($key);
             }
         }
+        
         if (empty($listeCombat)){
             redirect('home','refresh');
         }

@@ -33,12 +33,12 @@
                         echo form_input('Ag', set_value('Ag'), 'class="form-control" placeholder="" ');
                     echo '</div>';
                     echo '<div class="form-group">';
-                        echo form_label('Perception :', 'Per');
-                        echo form_input('Per', set_value('Per'), 'class="form-control" placeholder="" ');
-                    echo '</div>';
-                    echo '<div class="form-group">';
                         echo form_label('Intelligence :', 'Int');
                         echo form_input('Int', set_value('Int'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Perception :', 'Per');
+                        echo form_input('Per', set_value('Per'), 'class="form-control" placeholder="" ');
                     echo '</div>';
                     echo '<div class="form-group">';
                         echo form_label('Force mentale :', 'FM');
