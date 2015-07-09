@@ -1,0 +1,103 @@
+<div class="row">
+    <h1 class="titre">Creer un archetype de personnage</h1>
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="account-wall col-xs-12">
+            <?php
+                $options = array(1 => 'x1', 2 => 'x2', 3 => 'x3');
+                $options_typeA = array('primitif' => 'Armure Primitive', 'pareBalle' => 'Armure Pare-Balle', 'carapace' => 'Armure Carapace', 'nrj' => 'Armure Energétique');
+                echo form_open('creationVerif', 'class=""');
+                echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+                echo '<div class="col-xs-6">';
+                    echo '<div class="form-group">';
+                        echo form_label('Nom :', 'nom');
+                        echo form_input('nom', set_value('nom'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('CC :', 'CC');
+                        echo form_input('CC', set_value('CC'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('CT :', 'CT');
+                        echo form_input('CT', set_value('CT'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Force :', 'F');
+                        echo form_input('F', set_value('F'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Endurance :', 'E');
+                        echo form_input('E', set_value('E'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Agilite :', 'Ag');
+                        echo form_input('Ag', set_value('Ag'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Perception :', 'Per');
+                        echo form_input('Per', set_value('Per'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Intelligence :', 'Int');
+                        echo form_input('Int', set_value('Int'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Force mentale :', 'FM');
+                        echo form_input('FM', set_value('FM'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Sociabilite :', 'Soc');
+                        echo form_input('Soc', set_value('Soc'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                echo '</div>';
+                echo '<div class="col-xs-6">';
+                    echo '<div class="form-group">';
+                        echo form_label('Armure tête :', 'PA_tete');
+                        echo form_input('PA_tete', set_value('PA_tete'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Armure bras droit :', 'PA_bd');
+                        echo form_input('PA_bd', set_value('PA_bd'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Armure bras gauche :', 'PA_bg');
+                        echo form_input('PA_bg', set_value('PA_bg'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Armure corps :', 'PA_corps');
+                        echo form_input('PA_corps', set_value('PA_corps'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Armure jambe droite :', 'PA_jd');
+                        echo form_input('PA_jd', set_value('PA_jd'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Armure jambe gauche :', 'PA_jg');
+                        echo form_input('PA_jg', set_value('PA_jg'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Type Armure :', 'typeA');
+                        echo form_dropdown('typeA', $options_typeA, '','class="form-control"');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Points de blessures :', 'PV');
+                        echo form_input('PV', set_value('PV'), 'class="form-control" placeholder="" ');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Endurance surnaturelle :', 'ES');
+                        echo form_dropdown('ES', $options, '','class="form-control"');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Force surnaturelle :', 'FS');
+                        echo form_dropdown('FS', $options, '','class="form-control"');
+                    echo '</div>';
+                echo '</div>';
+                echo '<div class="col-xs-12">';
+                    echo '<div class="form-group">';
+                        echo form_submit('submit', 'Creer','class="btn btn-lg btn-primary btn-block"');
+                    echo '</div>';
+                echo '</div>';
+                echo form_close();
+            ?>
+        </div>
+    </div>
+</div>
