@@ -3,7 +3,9 @@
         $('#table_id').DataTable({
             scrollY: 500,
             paging: false,
-            scrollX: false
+            "autoWidth": false,
+            scrollX: false,
+            scrollY: false,
         });
     } );
     $(function(){$(".tooltip-link").tooltip();});
@@ -41,13 +43,14 @@
 
 </script>
 <div class="row">
-    <div class="">
+    <div class="col-xs-12">
         <h1 class="titre">Liste des archetype</h1>
         <?php echo form_open('encounter', 'class=""'); ?>
-            <table id="table_id" class="table text-center table-bordered" >
+            <table id="table_id" class="table">
                 <thead>
-                    <tr class="titre_tableau">
+                    <tr class="">
                         <th>Nom</th>
+                        <th></th>
                         <th>CC</th>
                         <th>CT</th>
                         <th>F</th>
@@ -61,7 +64,6 @@
                         <th>Armure</th>
                         <th></th>
                         <th></th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody class="ligne_couleur_alterne">
@@ -70,7 +72,8 @@
                         $i = 0;
                     foreach($listeArchetype as $key=>$val){
                         echo '<tr class = "gras">';
-                            echo '<td>'.$key.'</td>';
+                            echo '<td>'.str_replace('_', ' ', $key).'</td>';
+                            echo '<td>'.form_dropdown($key, $options, 0,'class=""').'</td>';
                             echo '<td>'.$val['CC'].'</td>';
                             echo '<td>'.$val['CT'].'</td>';
                             echo '<td>'.$val['F'];
@@ -97,7 +100,6 @@
                             echo $val['PA_jd'].'/';
                             echo $val['PA_jg'];
                             echo '</td>';
-                            echo '<td>'.form_dropdown($key, $options, 0,'class=""').'</td>';
                             echo '  <td>
                                         <a href="#"
                                         class="link tooltip-link"

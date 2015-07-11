@@ -24,42 +24,38 @@ class CreationVerif extends CI_Controller {
         $this->form_validation->set_rules('PA_corps', 'armure_corps', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
         $this->form_validation->set_rules('PA_jd', 'armure_jambe_droite', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
         $this->form_validation->set_rules('PA_jg', 'armure_jambe_gauche', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PV', 'blessure', 'trim|required|callback_verif|numeric|integer|greater_than[0]');
+        $this->form_validation->set_rules('PV', 'blessure', 'trim|required|numeric|integer|greater_than[0]');
 
         if($this->form_validation->run() == FALSE){
             $this->load->view('header');
             $this->load->view('creation_view');
             $this->load->view('footer');
         }
-        else{
+        else{           
+            $tab = array(   "nom" => $this->input->post('nom'),
+                            "CC" => $this->input->post('CC'),
+                            "CT" => $this->input->post('CT'),
+                            "F" => $this->input->post('F'),
+                            "E" => $this->input->post('E'),
+                            "Ag" => $this->input->post('Ag'),
+                            "Per" => $this->input->post('Per'),
+                            "Int" => $this->input->post('Int'),
+                            "FM" => $this->input->post('FM'),
+                            "Soc" => $this->input->post('Soc'),
+                            "PV" => $this->input->post('PV'),
+                            "PA_tete" => $this->input->post('PA_tete'),
+                            "PA_bd" =>$this->input->post('PA_bd'),
+                            "PA_bg" => $this->input->post('PA_bg'),
+                            "PA_corps" => $this->input->post('PA_corps'),
+                            "PA_jd" => $this->input->post('PA_jd'),
+                            "PA_jg" => $this->input->post('PA_jg'),
+                            "typeA" => $this->input->post('typeA'),
+                            "ES" => $this->input->post('ES'),
+                            "FS" => $this->input->post('FS')
+                           );        
+            $this->Personnage->creerPersonnage($tab);
             redirect('home', 'refresh');
         }
-    }
-    
-    function verif($pv){           
-        $tab = array(   "nom" => $this->input->post('nom'),
-                        "CC" => $this->input->post('CC'),
-                        "CT" => $this->input->post('CT'),
-                        "F" => $this->input->post('F'),
-                        "E" => $this->input->post('E'),
-                        "Ag" => $this->input->post('Ag'),
-                        "Per" => $this->input->post('Per'),
-                        "Int" => $this->input->post('Int'),
-                        "FM" => $this->input->post('FM'),
-                        "Soc" => $this->input->post('Soc'),
-                        "PV" => $this->input->post('PV'),
-                        "PA_tete" => $this->input->post('PA_tete'),
-                        "PA_bd" =>$this->input->post('PA_bd'),
-                        "PA_bg" => $this->input->post('PA_bg'),
-                        "PA_corps" => $this->input->post('PA_corps'),
-                        "PA_jd" => $this->input->post('PA_jd'),
-                        "PA_jg" => $this->input->post('PA_jg'),
-                        "typeA" => $this->input->post('typeA'),
-                        "ES" => $this->input->post('ES'),
-                        "FS" => $this->input->post('FS')
-                       );        
-        $this->Personnage->creerPersonnage($tab);
-        return true;
     }
 }
 ?>

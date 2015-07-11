@@ -23,7 +23,7 @@ foreach ($listeEncounter as $l){
                         <td>BE</td>
                     </tr>
                     <tr>
-                        <td>'.$l['nom'].'</td>
+                        <td>'.str_replace('_', ' ', $l['nom']).'</td>
                         <td>'.$l['CC'].'</td>
                         <td>'.$l['CT'].'</td>
                         <td>'.$l['F'].'</td>
@@ -72,7 +72,7 @@ foreach ($listeEncounter as $l){
                         <td>
                             <select name="typeDMG" class = "form-control">
                                 <option value="normaux">Normaux</option>
-                                <option value="primitif">Primitif</option>
+                                <option value="primitifs">Primitifs</option>
                             </select>
                         </td>
                         <td><p name="info" style="vertical-align:middle; display: inline;"></p></td>

@@ -7,17 +7,6 @@
     -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
 }
-.login-title
-{
-    color: #555;
-    font-size: 18px;
-    font-weight: 400;
-    display: block;
-}
-body { padding-top: 40px; }
-@media screen and (max-width: 768px) {
-    body { padding-top: 0px; }
-}
 
 .navbar{
 }
@@ -40,21 +29,45 @@ body { padding-top: 40px; }
 }
 
 
-.ligne_couleur_alterne tr:nth-child(even) {background: #d8e4ff;}
-
-.titre_tableau {
-    color: white;
-    background-color: #000d43;
-    font-weight:bold;
+.ligne_couleur_alterne tr:nth-child(even) {
+    /*background: #d8e4ff;*/
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.titre_tableau th{
-    text-align: center;
+.ligne_couleur_alterne tr:nth-child(odd) {
+    /*background: #d8e4ff;*/
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.table tbody tr td {
+    border-top: 0px solid;
+    border-color: black;
+    vertical-align:middle; 
+}
+
+.table{
+}
+
+.table thead{
+    color: white;
+    background: url(images/sky-trip.jpg);
+    background-size: cover;                
+    background-repeat: no-repeat;
+    background-position: center center;     
+    font-weight:bold;
+    margin-bottom: 10px;
+    
 }
 
 .well{
     text-align: center;
     vertical-align: middle;
+    background: url(images/sky-trip.jpg);
+    background-size: cover;                
+    background-repeat: no-repeat;
+    background-position: center center; 
+    color: white;
+    border: 0px;
 }
 
 .thumbnail{
@@ -78,7 +91,7 @@ body { padding-top: 40px; }
 
 .titre { 
     background: url(images/DarkHeresy-Banner.jpg);
-    background-size:   cover;                
+    background-size: cover;                
     background-repeat: no-repeat;
     background-position: center center; 
     width: 100%;
@@ -122,10 +135,6 @@ body {
     width: 1170px;
 }
 
-.badge {
-    
-}
-
 .panel-footer {
     background-color: white;
 }
@@ -148,9 +157,5 @@ float: right!important;
 
 .gras{
     font-weight:bold;
-}
-
-.progress-bar{
-    background-color: #FF7F50;
 }
 
