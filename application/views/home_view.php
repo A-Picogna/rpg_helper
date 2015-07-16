@@ -6,6 +6,7 @@
             "autoWidth": false,
             scrollX: false,
             scrollY: false,
+            "searching": false
         });
     } );
     $(function(){$(".tooltip-link").tooltip();});
@@ -43,8 +44,8 @@
 
 </script>
 <div class="row">
+    <h1 class="titre">Bibliothèque d'Archetypes</h1>
     <div class="col-xs-12">
-        <h1 class="titre">Liste des archetype</h1>
         <?php echo form_open('encounter', 'class=""'); ?>
             <table id="table_id" class="table">
                 <thead>

@@ -8,7 +8,12 @@ class Home extends CI_Controller {
     }
     
 	public function index(){
-        $data['listeArchetype'] = $this->Personnage->getListeArchetype();
+        if ($this->session->userdata("biblio")){
+            $data['listeArchetype'] = $this->session->userdata('biblio');
+        }
+        else{
+            $data['listeArchetype'] = $this->Personnage->getListeArchetype();
+        }
         $this->load->view('header');
         $this->load->view('home_view', $data);        
         $this->load->view('footer');
@@ -32,6 +37,9 @@ class Home extends CI_Controller {
         $this->load->view('header');
         $this->load->view('home_view', $data);        
         $this->load->view('footer');
+    }
+    
+    public function creerBiblio(){
     }
 }
 
