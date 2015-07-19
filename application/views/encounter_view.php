@@ -41,7 +41,7 @@ foreach ($listeEncounter as $l){
     </div>          
     <div class="col-xs-10 col-xs-offset-1">
         <div class="CSSTableGenerator">
-            <table class="">
+            <table class="creature">
                 <tr>
                     <td>Numero personnage</td>
                     <td>Pv restants</td>
@@ -49,7 +49,7 @@ foreach ($listeEncounter as $l){
                     <td>Pénération</td>
                     <td>Loca</td>
                     <td>Type Degats</td>
-                    <td></td>
+                    <td>Bilan</td>
                 </tr>';
     for($i = 1 ; $i <= $l['nbGen'] ; $i++){
         $idPerso++;
@@ -107,7 +107,6 @@ function majPV(){
     for (i = 1; i <= nbPerso ; i++){
         dmg = $("#"+i+" input[name='dmg'] ").val();
         $("#"+i+" p[name='info'] ").text("");
-        $("#"+i+" p[name='info'] ").hide();
         if (dmg > 0){
             perso = tabPerso[i];
             pv = $("#"+i+" td[name='pv']").text();
