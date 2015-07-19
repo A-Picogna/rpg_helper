@@ -97,7 +97,7 @@ foreach ($listeEncounter as $l){
 $listePersonnages = json_encode($listePersonnages);
 ?>
 </div>
-<a href="#"><button class="btn btn-lg btn-danger pull-right">Fin de la rencontre</button></a>
+<a href="<?php echo base_url().'index.php/home/finRencontre'; ?>"><button class="btn btn-lg btn-danger pull-right">Fin de la rencontre</button></a>
 <button class="btn btn-lg btn-success" onClick="majPV()">Calculs</button>
             
 <script type="text/javascript">

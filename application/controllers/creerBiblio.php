@@ -21,7 +21,7 @@ class CreerBiblio extends CI_Controller {
     function creerListe(){
         $id = $this->input->post('identifiant');
         $choix = $this->input->post('choixListe');        
-        $path = './assets/json/bibliotheque_'.$id.'.json';
+        $path = './assets/json/bibliotheque'.$id.'.json';
         if (!file_exists($path)){
             write_file($path , "");
             $this->session->unset_userdata('bibliotheque');

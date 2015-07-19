@@ -9,11 +9,18 @@ class Encounter extends CI_Controller {
     }
     
 	public function index(){
-        $listeNom = $this->Archetype->getListeArchetype();
+        $id = $this->session->userdata("bibliotheque");
+        if (!$id){
+            $listeNom = $this->Archetype->getListeArchetype();
+            $id = "";
+        }
+        else{
+            $listeNom = $this->Archetype->getListeArchetypePerso($id);
+        }
         $listeCombat = array();
         foreach ($listeNom as $key => $val){
             if (($this->input->post($key) != null) && $this->input->post($key) > 0){
-                $listeCombat[$key] = $this->Archetype->getArchetype($key);
+                $listeCombat[$key] = $this->Archetype->getArchetype($key, $id);
                 $listeCombat[$key]["nbGen"] = $this->input->post($key);
             }
         }

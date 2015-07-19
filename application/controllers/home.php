@@ -22,11 +22,7 @@ class Home extends CI_Controller {
     
     public function finRencontre(){
         $this->session->unset_userdata('encounter');
-        session_destroy();
-        $data['listeArchetype'] = $this->Archetype->getListeArchetype();
-        $this->load->view('header');
-        $this->load->view('home_view', $data);        
-        $this->load->view('footer');
+        redirect('home', 'refresh');
     }
 }
 

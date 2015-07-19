@@ -9,7 +9,7 @@ class Archetype extends CI_Model{
     
     function creerArchetype($carac, $id){
         $data = array();
-        $path = './assets/json/bibliotheque_'.$id.'.json'; 
+        $path = './assets/json/bibliotheque'.$id.'.json'; 
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         $tmp = $carac['nom'];
@@ -48,7 +48,7 @@ class Archetype extends CI_Model{
 
     function importerArchetype($archetype, $id){
         $data = array();
-        $path = './assets/json/bibliotheque_'.$id.'.json';       
+        $path = './assets/json/bibliotheque'.$id.'.json';       
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         $data[$archetype] = $this->Archetype->getArchetype($archetype);
@@ -56,19 +56,19 @@ class Archetype extends CI_Model{
         file_put_contents($path, $newJsonString);  
     }
     
-    function getArchetype($nom){
+    function getArchetype($nom, $id=""){
         $data = array();
         $res = array();
-        $jsonString = file_get_contents('./assets/json/archetypes.json');
+        $path = './assets/json/bibliotheque'.$id.'.json';       
+        $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         $res = $data[$nom];
         return $res;
-    }
-    
+    }    
     
     function supprimerArchetype($nom, $id){
         $data = array();
-        $path = './assets/json/bibliotheque_'.$id.'.json'; 
+        $path = './assets/json/bibliotheque'.$id.'.json'; 
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         unset($data[$nom]);
@@ -77,7 +77,7 @@ class Archetype extends CI_Model{
     }
     
     function getListeArchetypePerso($id){
-        $path = './assets/json/bibliotheque_'.$id.'.json';
+        $path = './assets/json/bibliotheque'.$id.'.json';
         $data = array();        
         if (file_exists($path)){
             $jsonString = file_get_contents($path);

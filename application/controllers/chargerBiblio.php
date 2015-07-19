@@ -20,7 +20,7 @@ class ChargerBiblio extends CI_Controller {
     
     function chargerListe(){
         $id = $this->input->post('identifiant');      
-        $path = './assets/json/bibliotheque_'.$id.'.json';
+        $path = './assets/json/bibliotheque'.$id.'.json';
         if (file_exists($path)){
             $this->session->unset_userdata("bibliotheque");
             $this->session->set_userdata("bibliotheque", $id);
