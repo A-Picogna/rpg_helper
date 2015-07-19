@@ -8,11 +8,11 @@ class Home extends CI_Controller {
     }
     
 	public function index(){
-        if ($this->session->userdata("biblio")){
-            $data['listeArchetype'] = $this->session->userdata('biblio');
+        if ($this->session->userdata("bibliotheque")){
+            $data['listeArchetype'] = $this->Archetype->getListeArchetypePerso($this->session->userdata("bibliotheque"));
         }
         else{
-            $data['listeArchetype'] = $this->Personnage->getListeArchetype();
+            $data['listeArchetype'] = $this->Archetype->getListeArchetype();
         }
         $this->load->view('header');
         $this->load->view('home_view', $data);        
@@ -26,20 +26,17 @@ class Home extends CI_Controller {
 	}
     
     public function supprimerArchetype($nom){
-        $this->Personnage->supprimerArchetype($nom);
+        $this->Archetype->supprimerArchetype($nom);
         redirect('home', 'refresh');
     }
     
     public function finRencontre(){
         $this->session->unset_userdata('encounter');
         session_destroy();
-        $data['listeArchetype'] = $this->Personnage->getListeArchetype();
+        $data['listeArchetype'] = $this->Archetype->getListeArchetype();
         $this->load->view('header');
         $this->load->view('home_view', $data);        
         $this->load->view('footer');
-    }
-    
-    public function creerBiblio(){
     }
 }
 

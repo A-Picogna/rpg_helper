@@ -8,7 +8,7 @@ class CreationVerif extends CI_Controller {
     function index(){
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('nom', 'nom_archetype', 'trim|required|alpha_dash');
+        $this->form_validation->set_rules('nom', 'nom_archetype', 'trim|required|max_length[100]|alpha_dash');
         $this->form_validation->set_rules('CC', 'capacite_combat', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
         $this->form_validation->set_rules('CT', 'capacite_tir', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
         $this->form_validation->set_rules('F', 'force', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
@@ -53,7 +53,7 @@ class CreationVerif extends CI_Controller {
                             "ES" => $this->input->post('ES'),
                             "FS" => $this->input->post('FS')
                            );        
-            $this->Personnage->creerPersonnage($tab);
+            $this->Archetype->creerArchetype($tab);
             redirect('home', 'refresh');
         }
     }

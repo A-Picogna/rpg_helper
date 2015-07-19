@@ -107,6 +107,7 @@ function majPV(){
     for (i = 1; i <= nbPerso ; i++){
         dmg = $("#"+i+" input[name='dmg'] ").val();
         $("#"+i+" p[name='info'] ").text("");
+        $("#"+i+" p[name='info'] ").hide();
         if (dmg > 0){
             perso = tabPerso[i];
             pv = $("#"+i+" td[name='pv']").text();

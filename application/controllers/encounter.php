@@ -9,11 +9,11 @@ class Encounter extends CI_Controller {
     }
     
 	public function index(){
-        $listeNom = $this->Personnage->getListeArchetype();
+        $listeNom = $this->Archetype->getListeArchetype();
         $listeCombat = array();
         foreach ($listeNom as $key => $val){
             if (($this->input->post($key) != null) && $this->input->post($key) > 0){
-                $listeCombat[$key] = $this->Personnage->getArchetype($key);
+                $listeCombat[$key] = $this->Archetype->getArchetype($key);
                 $listeCombat[$key]["nbGen"] = $this->input->post($key);
             }
         }

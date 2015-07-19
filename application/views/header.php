@@ -37,10 +37,80 @@
                 <div class="collapse navbar-collapse">
                     <ul id="navbar_content_left" class="nav navbar-nav">
                         <li><a href="<?php echo base_url()."index.php/home/creerArchetype"; ?>"><span class="glyphicon glyphicon-list"></span> Creer un archetype</a></li>
-                        <li><a href="<?php echo base_url()."index.php/listeCommune"; ?>"><span class=""></span> Liste publique</a></li>
-                        <li><a href="<?php echo base_url()."index.php/home/creerBiblio"; ?>"><span class=""></span> Creer une liste privée</a></li>
+                        <?php
+                        if ($this->session->userdata("bibliotheque")){
+                            echo '
+                        <li><a href="'.base_url().'index.php/listeCommune"><span class=""></span> Liste publique</a></li>
+                            ';
+                        }
+                        ?>
+                        <li><a href="#" data-toggle="modal" data-target="#creerListe"><span class=""></span> Creer une liste</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#chargerListe"><span class=""></span> Charger une liste</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="container">
+            
+            
+<div id="creerListe" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title text-center">Creer une bibliothèque personalisée</h1>
+            </div>
+            <div class="modal-body">
+<?php
+                echo form_open('creerBiblio', 'class=""');
+                echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+                echo '<div class="form-group">';
+                    echo form_label('Identifiant :', 'identifiant');
+                    echo form_input('identifiant', set_value('identifiant'), 'class="form-control" placeholder="Only alphanumeric" ');
+                echo '</div>';
+                echo '<div class="form-group">';
+                    echo form_label('Importer la liste publique :', 'importerListe');
+                    echo form_dropdown('choixListe', array(0 => 'non', 1 => 'oui'), 0,'class="form-control"');
+                echo '</div>';
+?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<?php
+                echo form_submit('submit', 'Creer Bibliothèque','class="btn btn-primary"');
+                echo form_close();
+?>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id="chargerListe" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title text-center">Charger une bibliothèque existante</h1>
+            </div>
+            <div class="modal-body">
+<?php
+                echo form_open('creerBiblio', 'class=""');
+                echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+                echo '<div class="form-group">';
+                    echo form_label('Identifiant :', 'identifiant');
+                    echo form_input('identifiant', set_value('identifiant'), 'class="form-control" placeholder="Only alphanumeric" ');
+                echo '</div>';
+?>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<?php
+                echo form_submit('submit', 'Charger la liste','class="btn btn-primary"');
+                echo form_close();
+?>
+            </div>
+        </div>
+    </div>
+</div>

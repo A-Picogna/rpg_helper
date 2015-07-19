@@ -1,15 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Personnage extends CI_Model{
+class Archetype extends CI_Model{
     
     public function __construct(){
         
     }
     
-    function creerPersonnage($carac){
+    function creerArchetype($carac){
         $data = array();
-        $jsonString = file_get_contents('archetypes.json');
+        $jsonString = file_get_contents('./assets/json/archetypes.json');
         $data = json_decode($jsonString, true);
         $tmp = $carac['nom'];
         $data[$tmp] = array(    "nom" => $carac["nom"],
@@ -34,32 +34,57 @@ class Personnage extends CI_Model{
                                 "FS" => $carac["FS"]
                                );
         $newJsonString = json_encode($data);
-        file_put_contents('archetypes.json', $newJsonString);        
+        file_put_contents('./assets/json/archetypes.json', $newJsonString);        
     }
     
     function getListeArchetype(){
+        $path = './assets/json//archetypes.json';
         $data = array();
-        $jsonString = file_get_contents('archetypes.json');
+        $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         return $data;
+    }
+
+    function importerArchetype($archetype, $id){
+        $data = array();
+        $path = './assets/json/bibliotheque_'.$id.'.json';       
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        $data[$archetype] = $this->Archetype->getArchetype($archetype);
+        $newJsonString = json_encode($data);
+        file_put_contents($path, $newJsonString);  
     }
     
     function getArchetype($nom){
         $data = array();
         $res = array();
-        $jsonString = file_get_contents('archetypes.json');
+        $jsonString = file_get_contents('./assets/json/archetypes.json');
         $data = json_decode($jsonString, true);
         $res = $data[$nom];
         return $res;
     }
     
+    
     function supprimerArchetype($nom){
         $data = array();
-        $jsonString = file_get_contents('archetypes.json');
+        $jsonString = file_get_contents('./assets/json/archetypes.json');
         $data = json_decode($jsonString, true);
         unset($data[$nom]);
         $newJsonString = json_encode($data);
-        file_put_contents('archetypes.json', $newJsonString);  
+        file_put_contents('./assets/json/archetypes.json', $newJsonString);  
+    }
+    
+    function getListeArchetypePerso($id){
+        $path = './assets/json/bibliotheque_'.$id.'.json';
+        $data = array();        
+        if (file_exists($path)){
+            $jsonString = file_get_contents($path);
+            $data = json_decode($jsonString, true);
+            return $data;
+        }
+        else{
+            return "";   
+        }
     }
 }
 

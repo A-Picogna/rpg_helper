@@ -46,7 +46,10 @@
 <div class="row">
     <h1 class="titre">Bibliothèque d'Archetypes</h1>
     <div class="col-xs-12">
-        <?php echo form_open('encounter', 'class=""'); ?>
+        <?php 
+        echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+        echo form_open('encounter', 'class=""'); 
+        ?>
             <table id="table_id" class="table">
                 <thead>
                     <tr class="">
@@ -71,58 +74,60 @@
                     <?php
                         $options = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30);
                         $i = 0;
-                    foreach($listeArchetype as $key=>$val){
-                        echo '<tr class = "gras">';
-                            echo '<td>'.str_replace('_', ' ', $key).'</td>';
-                            echo '<td>'.form_dropdown($key, $options, 0,'class=""').'</td>';
-                            echo '<td>'.$val['CC'].'</td>';
-                            echo '<td>'.$val['CT'].'</td>';
-                            echo '<td>'.$val['F'];
-                            for ($j = 1 ; $j < $val['FS'] ; $j++){
-                                echo '<span class="glyphicon glyphicon-flash"></span>';
-                            }
-                            echo '</td>';
-                            echo '<td>'.$val['E'];
-                            for ($j = 1 ; $j < $val['ES'] ; $j++){
-                                echo '<span class="glyphicon glyphicon-flash"></span>';
-                            }
-                            echo '</td>';
-                            echo '<td>'.$val['Ag'].'</td>';
-                            echo '<td>'.$val['Int'].'</td>';
-                            echo '<td>'.$val['Per'].'</td>';
-                            echo '<td>'.$val['FM'].'</td>';
-                            echo '<td>'.$val['Soc'].'</td>';
-                            echo '<td class="text-red">'.$val['PV'].'</td>';
-                            echo '<td class="text-green">';
-                            echo $val['PA_tete'].'/';
-                            echo $val['PA_bd'].'/';
-                            echo $val['PA_bg'].'/';
-                            echo $val['PA_corps'].'/';
-                            echo $val['PA_jd'].'/';
-                            echo $val['PA_jg'];
-                            echo '</td>';
-                            echo '  <td>
-                                        <a href="#"
-                                        class="link tooltip-link"
-                                        data-toggle="tooltip"
-                                        data-original-title="Modifier">
-                                            <button type="button" value='.$key.' class="btn btn-primary btn-xs my_button" data-toggle="modal" data-target="#myModal">
-                                                <span class="glyphicon glyphicon-pencil"></span>
-                                            </button>
-                                        </a>
-                                    </td>';
-                            echo '  <td>
-                                        <a href="'.base_url().'index.php/home/supprimerArchetype/'.$key.'"
-                                        class="link tooltip-link"
-                                        data-toggle="tooltip"
-                                        data-original-title="Supprimer">
-                                            <button type="button" class="btn btn-danger btn-xs" onclick="return confirm(\'Attention ! Etes-vous sûr de vouloir supprimer cet archetype ?\')">
-                                                <span class="glyphicon glyphicon-trash" ></span>
-                                            </button>
-                                        </a>
-                                    </td>';
-                        echo '</tr>';
-                        $i++;
+                    if(!empty($listeArchetype)){
+                        foreach($listeArchetype as $key=>$val){
+                            echo '<tr class = "gras">';
+                                echo '<td>'.str_replace('_', ' ', $key).'</td>';
+                                echo '<td>'.form_dropdown($key, $options, 0,'class=""').'</td>';
+                                echo '<td>'.$val['CC'].'</td>';
+                                echo '<td>'.$val['CT'].'</td>';
+                                echo '<td>'.$val['F'];
+                                for ($j = 1 ; $j < $val['FS'] ; $j++){
+                                    echo '<span class="glyphicon glyphicon-flash"></span>';
+                                }
+                                echo '</td>';
+                                echo '<td>'.$val['E'];
+                                for ($j = 1 ; $j < $val['ES'] ; $j++){
+                                    echo '<span class="glyphicon glyphicon-flash"></span>';
+                                }
+                                echo '</td>';
+                                echo '<td>'.$val['Ag'].'</td>';
+                                echo '<td>'.$val['Int'].'</td>';
+                                echo '<td>'.$val['Per'].'</td>';
+                                echo '<td>'.$val['FM'].'</td>';
+                                echo '<td>'.$val['Soc'].'</td>';
+                                echo '<td class="text-red">'.$val['PV'].'</td>';
+                                echo '<td class="text-green">';
+                                echo $val['PA_tete'].'/';
+                                echo $val['PA_bd'].'/';
+                                echo $val['PA_bg'].'/';
+                                echo $val['PA_corps'].'/';
+                                echo $val['PA_jd'].'/';
+                                echo $val['PA_jg'];
+                                echo '</td>';
+                                echo '  <td>
+                                            <a href="#"
+                                            class="link tooltip-link"
+                                            data-toggle="tooltip"
+                                            data-original-title="Modifier">
+                                                <button type="button" value='.$key.' class="btn btn-primary btn-xs my_button" data-toggle="modal" data-target="#myModal">
+                                                    <span class="glyphicon glyphicon-pencil"></span>
+                                                </button>
+                                            </a>
+                                        </td>';
+                                echo '  <td>
+                                            <a href="'.base_url().'index.php/home/supprimerArchetype/'.$key.'"
+                                            class="link tooltip-link"
+                                            data-toggle="tooltip"
+                                            data-original-title="Supprimer">
+                                                <button type="button" class="btn btn-danger btn-xs" onclick="return confirm(\'Attention ! Etes-vous sûr de vouloir supprimer cet archetype ?\')">
+                                                    <span class="glyphicon glyphicon-trash" ></span>
+                                                </button>
+                                            </a>
+                                        </td>';
+                            echo '</tr>';
+                            $i++;
+                        }
                     }
                     ?>
                 </tbody>
