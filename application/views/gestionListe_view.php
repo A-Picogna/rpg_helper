@@ -70,7 +70,7 @@
                     foreach($listeArchetype as $key=>$val){
                         echo '<tr class = "gras">';
                             echo '  <td>
-                                        <a href="'.base_url().'index.php/listeCommune/addListePerso/'.$key.'"
+                                        <a href="'.base_url().'index.php/gestionListe/addListePerso/'.$key.'"
                                         class="link tooltip-link"
                                         data-toggle="tooltip"
                                         data-original-title="Ajouter à sa bibliothèque">

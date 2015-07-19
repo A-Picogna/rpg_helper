@@ -53,7 +53,7 @@ class CreationVerif extends CI_Controller {
                             "ES" => $this->input->post('ES'),
                             "FS" => $this->input->post('FS')
                            );        
-            $this->Archetype->creerArchetype($tab);
+            $this->Archetype->creerArchetype($tab, $this->session->userdata("bibliotheque"));
             redirect('home', 'refresh');
         }
     }

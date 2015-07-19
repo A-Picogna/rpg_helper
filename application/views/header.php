@@ -36,11 +36,11 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul id="navbar_content_left" class="nav navbar-nav">
-                        <li><a href="<?php echo base_url()."index.php/home/creerArchetype"; ?>"><span class="glyphicon glyphicon-list"></span> Creer un archetype</a></li>
                         <?php
                         if ($this->session->userdata("bibliotheque")){
                             echo '
-                        <li><a href="'.base_url().'index.php/listeCommune"><span class=""></span> Liste publique</a></li>
+                        <li><a href="'.base_url().'index.php/gestionListe/creerArchetype"><span class="glyphicon glyphicon-list"></span> Creer un archetype</a></li>
+                        <li><a href="'.base_url().'index.php/gestionListe"><span class=""></span> Liste publique</a></li>
                             ';
                         }
                         ?>
@@ -96,7 +96,7 @@
             </div>
             <div class="modal-body">
 <?php
-                echo form_open('creerBiblio', 'class=""');
+                echo form_open('chargerBiblio', 'class=""');
                 echo validation_errors('<div class="alert alert-danger gras">', '</div>');
                 echo '<div class="form-group">';
                     echo form_label('Identifiant :', 'identifiant');

@@ -7,9 +7,10 @@ class Archetype extends CI_Model{
         
     }
     
-    function creerArchetype($carac){
+    function creerArchetype($carac, $id){
         $data = array();
-        $jsonString = file_get_contents('./assets/json/archetypes.json');
+        $path = './assets/json/bibliotheque_'.$id.'.json'; 
+        $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         $tmp = $carac['nom'];
         $data[$tmp] = array(    "nom" => $carac["nom"],
@@ -34,7 +35,7 @@ class Archetype extends CI_Model{
                                 "FS" => $carac["FS"]
                                );
         $newJsonString = json_encode($data);
-        file_put_contents('./assets/json/archetypes.json', $newJsonString);        
+        file_put_contents($path, $newJsonString);        
     }
     
     function getListeArchetype(){
@@ -65,13 +66,14 @@ class Archetype extends CI_Model{
     }
     
     
-    function supprimerArchetype($nom){
+    function supprimerArchetype($nom, $id){
         $data = array();
-        $jsonString = file_get_contents('./assets/json/archetypes.json');
+        $path = './assets/json/bibliotheque_'.$id.'.json'; 
+        $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         unset($data[$nom]);
         $newJsonString = json_encode($data);
-        file_put_contents('./assets/json/archetypes.json', $newJsonString);  
+        file_put_contents($path, $newJsonString);  
     }
     
     function getListeArchetypePerso($id){

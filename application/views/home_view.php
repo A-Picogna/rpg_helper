@@ -116,7 +116,7 @@
                                             </a>
                                         </td>';
                                 echo '  <td>
-                                            <a href="'.base_url().'index.php/home/supprimerArchetype/'.$key.'"
+                                            <a href="'.base_url().'index.php/gestionListe/supprimerArchetype/'.$key.'"
                                             class="link tooltip-link"
                                             data-toggle="tooltip"
                                             data-original-title="Supprimer">
