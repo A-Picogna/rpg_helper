@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <script>
 $(document).ready( function () {
-    
 });
 </script>
 <html>
@@ -51,7 +50,7 @@ $(document).ready( function () {
                             echo '
                         <li><a href="'.base_url().'index.php/gestionListe/creerArchetype"><span class="glyphicon glyphicon-list"></span> Creer un archetype</a></li>
                         <li><a href="'.base_url().'index.php/gestionListe"><span class=""></span> Liste publique</a></li>
-                        <li><a href="'.base_url().'index.php/gestionListe/supprimerBibliotheque"><span class=""></span> Supprimer Ma liste</a></li>
+                        <li><a href="'.base_url().'index.php/gestionListe/supprimerBibliotheque" onclick="return confirm(\'Etes-vous sûr de vouloir supprimer votre liste actuelle ? \')"><span class=""></span> Supprimer Ma liste</a></li>
                             ';
                         }
                         if (!$this->session->userdata("bibliotheque")){
