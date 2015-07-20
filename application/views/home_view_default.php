@@ -1,12 +1,10 @@
 <script>
     $(document).ready( function () {
         $('#table_id').DataTable({
-            scrollY: 500,
             paging: false,
             "autoWidth": false,
-            scrollX: false,
-            scrollY: false,
-            "searching": false
+            "searching": false,
+            responsive: true
         });
     } );
     $(function(){$(".tooltip-link").tooltip();});
