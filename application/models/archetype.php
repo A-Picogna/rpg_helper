@@ -39,7 +39,7 @@ class Archetype extends CI_Model{
     }
     
     function getListeArchetype(){
-        $path = './assets/json//archetypes.json';
+        $path = './assets/json/archetypes.json';
         $data = array();
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
@@ -51,7 +51,7 @@ class Archetype extends CI_Model{
         $path = './assets/json/bibliotheque'.$id.'.json';       
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
-        $data[$archetype] = $this->Archetype->getArchetype($archetype);
+        $data[$archetype] = $this->Archetype->getArchetypeListePublique($archetype);
         $newJsonString = json_encode($data);
         file_put_contents($path, $newJsonString);  
     }
@@ -64,7 +64,17 @@ class Archetype extends CI_Model{
         $data = json_decode($jsonString, true);
         $res = $data[$nom];
         return $res;
-    }    
+    }
+    
+    function getArchetypeListePublique($nom){
+        $data = array();
+        $res = array();
+        $path = './assets/json/archetypes.json';       
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        $res = $data[$nom];
+        return $res;
+    }
     
     function supprimerArchetype($nom, $id){
         $data = array();
@@ -74,6 +84,11 @@ class Archetype extends CI_Model{
         unset($data[$nom]);
         $newJsonString = json_encode($data);
         file_put_contents($path, $newJsonString);  
+    }
+    
+    public function supprimerBibliotheque($id){
+        $path = './assets/json/bibliotheque'.$id.'.json'; 
+        unlink($path);
     }
     
     function getListeArchetypePerso($id){

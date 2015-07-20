@@ -3,6 +3,9 @@ class CreerBiblio extends CI_Controller {
     
     function __construct(){
         parent::__construct();
+        if ($this->session->userdata("bibliotheque")){
+            redirect('home', 'refresh');
+        }
     }
    
     function index(){

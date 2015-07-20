@@ -1,4 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script>
+$(document).ready( function () {
+    
+});
+</script>
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,10 +13,11 @@
 
         <!-- JQuery -->
         <script type="text/javascript" src=<?php echo base_url()."assets/js/jquery.min.js"; ?>></script>
+        <script type="text/javascript" src=<?php echo base_url()."assets/js/jquery-ui.min.js"; ?>></script>
 
         <!-- Bootstrap -->
-        <link href=<?php echo base_url()."assets/css/bootstrap.min.css"; ?> rel="stylesheet">
         <link rel="stylesheet" href=<?php echo base_url()."assets/css/bootstrap.min.css"; ?> type="text/css">
+        <link rel="stylesheet" href=<?php echo base_url()."assets/css/bootstrap-multiselect.css"; ?> type="text/css">
         <script type="text/javascript" src=<?php echo base_url()."assets/js/bootstrap.min.js"; ?>></script>
 
         <!-- AMCHARTS -->
@@ -21,7 +27,10 @@
 
         <!-- DataTables -->
         <link rel="stylesheet" type="text/css" href=<?php echo base_url()."assets/css/jquery.dataTables.css"; ?> type="text/css">
+        <link rel="stylesheet" type="text/css" href=<?php echo base_url()."assets/css/dataTables.responsive.css"; ?> type="text/css">
+        <link rel="stylesheet" type="text/css" href=<?php echo base_url()."assets/css/jquery.dataTables_themeroller.css"; ?> type="text/css">
         <script type="text/javascript" charset="utf8" src=<?php echo base_url()."assets/js/jquery.dataTables.min.js"; ?>></script>
+        <script type="text/javascript" charset="utf8" src=<?php echo base_url()."assets/js/dataTables.responsive.min.js"; ?>></script>
 
         <!-- Le CSS perso quand la flemme de chercher dans les 14 trilliards de librairies :D -->
         <link href=<?php echo base_url()."assets/css/css_perso.css"; ?> rel="stylesheet">
@@ -36,21 +45,26 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul id="navbar_content_left" class="nav navbar-nav">
+                        <li><a href="#" data-toggle="modal" data-target="#chargerListe"><span class=""></span> Charger une liste</a></li>
                         <?php
                         if ($this->session->userdata("bibliotheque")){
                             echo '
                         <li><a href="'.base_url().'index.php/gestionListe/creerArchetype"><span class="glyphicon glyphicon-list"></span> Creer un archetype</a></li>
                         <li><a href="'.base_url().'index.php/gestionListe"><span class=""></span> Liste publique</a></li>
+                        <li><a href="'.base_url().'index.php/gestionListe/supprimerBibliotheque"><span class=""></span> Supprimer Ma liste</a></li>
                             ';
                         }
-                        ?>
+                        if (!$this->session->userdata("bibliotheque")){
+                            echo '
                         <li><a href="#" data-toggle="modal" data-target="#creerListe"><span class=""></span> Creer une liste</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#chargerListe"><span class=""></span> Charger une liste</a></li>
+                            ';
+                        }
+                        ?>                        
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container">
+        <div class="container-fluid">
             
             
 <div id="creerListe" class="modal fade" role="dialog">

@@ -1,11 +1,8 @@
 <script>
     $(document).ready( function () {
         $('#table_id').DataTable({
-            scrollY: 1000,
             "autoWidth": false,
-            scrollX: false,
-            scrollY: false,
-            
+            responsive: true            
         });
     } );
     $(function(){$(".tooltip-link").tooltip();});
@@ -45,7 +42,6 @@
 <div class="row">
     <h1 class="titre">Liste Commune</h1>
     <div class="col-xs-12">
-        <?php //echo form_open('encounter', 'class=""'); ?>
             <table id="table_id" class="table">
                 <thead>
                     <tr class="">
@@ -64,7 +60,7 @@
                         <th>Armure</th>
                     </tr>
                 </thead>
-                <tbody class="ligne_couleur_alterne">
+                <tbody class="transparant">
                     <?php
                         $i = 0;
                     foreach($listeArchetype as $key=>$val){

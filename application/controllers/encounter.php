@@ -20,7 +20,7 @@ class Encounter extends CI_Controller {
         $listeCombat = array();
         foreach ($listeNom as $key => $val){
             if (($this->input->post($key) != null) && $this->input->post($key) > 0){
-                $listeCombat[$key] = $this->Archetype->getArchetype($key, $id);
+                $listeCombat[$key] = $listeNom[$key];
                 $listeCombat[$key]["nbGen"] = $this->input->post($key);
             }
         }

@@ -8,23 +8,23 @@ class CreationVerif extends CI_Controller {
     function index(){
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('nom', 'nom_archetype', 'trim|required|max_length[100]|alpha_dash');
-        $this->form_validation->set_rules('CC', 'capacite_combat', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('CT', 'capacite_tir', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('F', 'force', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('E', 'encdurance', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('Ag', 'agilite', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('Per', 'perception', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('Int', 'intelligence', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('FM', 'force_mentale', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('Soc', 'sociabilite', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PA_tete', 'armure_tete', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PA_bd', 'armure_bras_droit', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PA_bg', 'armure_bras_gauche', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PA_corps', 'armure_corps', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PA_jd', 'armure_jambe_droite', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PA_jg', 'armure_jambe_gauche', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
-        $this->form_validation->set_rules('PV', 'blessure', 'trim|required|numeric|integer|greater_than[0]');
+        $this->form_validation->set_rules('nom', 'Nom', 'trim|required|max_length[100]|alpha_dash');
+        $this->form_validation->set_rules('CC', 'CC', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('CT', 'CT', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('F', 'Force', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('E', 'Endurance', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('Ag', 'Agilite', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('Per', 'Perception', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('Int', 'Intelligence', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('FM', 'Force Mentale', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('Soc', 'Sociabilite', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('PA_tete', 'Armure tête', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('PA_bd', 'Armure bras droit', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('PA_bg', 'Armure bras gauche', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('PA_corps', 'Armure corps', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('PA_jd', 'Armure jambe droite', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('PA_jg', 'Armure jambe gauche', 'trim|required|numeric|integer|greater_than[-1]|less_than[101]');
+        $this->form_validation->set_rules('PV', 'Points de blessures', 'trim|required|numeric|integer|greater_than[0]');
 
         if($this->form_validation->run() == FALSE){
             $this->load->view('header');

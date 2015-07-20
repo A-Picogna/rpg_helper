@@ -26,7 +26,11 @@ class GestionListe extends CI_Controller {
         $this->Archetype->supprimerArchetype($nom, $this->session->userdata("bibliotheque"));
         redirect('home', 'refresh');
     }
-
+    
+    public function supprimerBibliotheque(){
+        $this->Archetype->supprimerBibliotheque($this->session->userdata("bibliotheque"));
+        redirect('home', 'refresh');
+    }
     
 	public function addListePerso($archetype){
         $this->Archetype->importerArchetype($archetype, $this->session->userdata("bibliotheque"));
