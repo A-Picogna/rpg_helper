@@ -117,8 +117,8 @@ function majPV(){
         // si les degats sont positifs, on traite les degats sinon on considere qu'il s'agit d'un soin
         if (dmg > 0){
             
-            if (typeArme === "primitif"){
-                if (perso["typeA"] !== "primitif"){
+            if (typeArme === "primitifs"){
+                if (perso["typeA"] !== "primitifs"){
                     armure_effective = (perso[loca]*2) - (pen);
                 }
                 else{
@@ -126,7 +126,7 @@ function majPV(){
                 }
             }
             else{
-                if (perso["typeA"] === "primitif"){
+                if (perso["typeA"] === "primitifs"){
                     armure_effective = (Math.round(perso[loca]/2)) - (pen);
                 }
                 else{
