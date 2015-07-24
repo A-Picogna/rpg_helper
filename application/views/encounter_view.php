@@ -41,10 +41,10 @@ foreach ($listeEncounter as $l){
     </div>          
     <div class="col-xs-10 col-xs-offset-1">
         <div class="CSSTableGenerator">
-            <table class="creature">
+            <table class="creatureTable">
                 <tr>
-                    <td>Numero personnage</td>
-                    <td>Pv restants</td>
+                    <td>N° creature</td>
+                    <td>Pv</td>
                     <td>Degats infligés</td>
                     <td>Pénération</td>
                     <td>Loca</td>
@@ -57,7 +57,7 @@ foreach ($listeEncounter as $l){
                     <tr id="'.$idPerso.'">
                         <td>'.$idPerso.'</td>
                         <td name="pv" class="gras">'.$l['PV'].'</td>
-                        <td><input type="number" class="form-control" name="dmg" value="0" min="0" max="200"></td>
+                        <td><input type="number" class="form-control" name="dmg" value="0" min="-100" max="200"></td>
                         <td><input type="number" class="form-control" name="pen" value="0" min="0" max="200"></td>
                         <td>
                             <select name="loca" class = "form-control">
@@ -70,7 +70,7 @@ foreach ($listeEncounter as $l){
                             </select>
                         </td>
                         <td>
-                            <select name="typeDMG" class = "form-control">
+                            <select name="typeArme" class = "form-control">
                                 <option value="normaux">Normaux</option>
                                 <option value="primitifs">Primitifs</option>
                             </select>
@@ -79,7 +79,8 @@ foreach ($listeEncounter as $l){
                     </tr>';
         $listePersonnages[$idPerso] = array( 'BF' => floor(($l['F']/10)*($l['FS'])), 
                                             'BE' => floor(($l['E']/10)*($l['ES'])), 
-                                            'PV_restants' => $l['PV'], 
+                                            'PV_restants' => $l['PV'],
+                                            'PV_max' => $l['PV'],
                                             "PA_tete" => $l["PA_tete"], 
                                             "PA_bd" => $l["PA_bd"],
                                             "PA_bg" => $l["PA_bg"],
@@ -105,15 +106,18 @@ function majPV(){
     <?php echo "var nbPerso = $idPerso;";?>
     <?php echo "var tabPerso = $listePersonnages;"; ?>
     for (i = 1; i <= nbPerso ; i++){
+        // on récupere les valeurs
         dmg = $("#"+i+" input[name='dmg'] ").val();
         $("#"+i+" p[name='info'] ").text("");
+        pv = $("#"+i+" td[name='pv']").text();
+        loca = $("#"+i+" select[name='loca'] ").val();
+        pen = $("#"+i+" input[name='pen'] ").val();
+        typeArme = $("#"+i+" select[name='typeArme'] ").val();
+        perso = tabPerso[i];
+        // si les degats sont positifs, on traite les degats sinon on considere qu'il s'agit d'un soin
         if (dmg > 0){
-            perso = tabPerso[i];
-            pv = $("#"+i+" td[name='pv']").text();
-            loca = $("#"+i+" select[name='loca'] ").val();
-            pen = $("#"+i+" input[name='pen'] ").val();
-            typeDMG = $("#"+i+" select[name='typeDMG'] ").val();
-            if (typeDMG === "primitif"){
+            
+            if (typeArme === "primitif"){
                 if (perso["typeA"] !== "primitif"){
                     armure_effective = (perso[loca]*2) - (pen);
                 }
@@ -133,12 +137,33 @@ function majPV(){
             degats_effectifs = (dmg - (armure_effective + perso["BE"]));
             if (degats_effectifs < 0){degats_effectifs = 0;}
             pv = pv - degats_effectifs;
-            $("#"+i+" td[name='pv']").text(pv);
-            $("#"+i+" select[name='loca'] ").val("PA_corps");
-            $("#"+i+" input[name='pen'] ").val(0);
-            $("#"+i+" input[name='dmg'] ").val(0);
-            $("#"+i+" p[name='info'] ").text(dmg+" dégats "+typeDMG+" subits sur "+armure_effective+" PA de type "+perso["typeA"]);
+            $("#"+i+" p[name='info'] ").text(dmg+" dégats "+typeArme+" subits sur "+armure_effective+" PA de type "+perso["typeA"]);
         }
+        else{
+            if (dmg < 0){
+                pv = pv - dmg;
+                pv_max = perso["PV_max"];
+                if (pv > pv_max){
+                    soin = (-dmg) - (pv - pv_max);
+                    pv = pv_max;                    
+                }
+                else{
+                    soin = (-dmg);
+                }
+                $("#"+i+" p[name='info'] ").text("Cible soignée de "+(soin)+" (maximum : "+pv_max+")");
+            }
+        }
+        // On met les nouvelles valeurs
+        $("#"+i+" td[name='pv']").text(pv);
+        if (pv < 0){
+            $("#"+i+" td[name='pv']").css({"color":"red"});
+        }
+        else{
+            $("#"+i+" td[name='pv']").css({"color":"black"});
+        }                
+        $("#"+i+" select[name='loca'] ").val("PA_corps");
+        $("#"+i+" input[name='pen'] ").val(0);
+        $("#"+i+" input[name='dmg'] ").val(0);
     }
 }
 
