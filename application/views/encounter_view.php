@@ -48,7 +48,7 @@ foreach ($listeEncounter as $l){
                     <td>Degats infligés</td>
                     <td>Pénération</td>
                     <td>Loca</td>
-                    <td>Type Degats</td>
+                    <td>Type Arme</td>
                     <td>Bilan</td>
                 </tr>';
     for($i = 1 ; $i <= $l['nbGen'] ; $i++){
@@ -134,10 +134,11 @@ function majPV(){
                 }
             }   
             if (armure_effective < 0){armure_effective = 0;}
-            degats_effectifs = (dmg - (armure_effective + perso["BE"]));
+            BE = perso["BE"];
+            degats_effectifs = (dmg - (armure_effective + BE));
             if (degats_effectifs < 0){degats_effectifs = 0;}
             pv = pv - degats_effectifs;
-            $("#"+i+" p[name='info'] ").text(dmg+" dégats "+typeArme+" subits sur "+armure_effective+" PA de type "+perso["typeA"]);
+            $("#"+i+" p[name='info'] ").text(degats_effectifs+" dmg subits ("+dmg+" reduits par "+armure_effective+" PA et "+BE+" BE)");
         }
         else{
             if (dmg < 0){
