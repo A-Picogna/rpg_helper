@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <script>
-$(document).ready( function () {
+$(document).ready(function(){
 });
 </script>
 <html>
@@ -17,6 +17,7 @@ $(document).ready( function () {
         <!-- Bootstrap -->
         <link rel="stylesheet" href=<?php echo base_url()."assets/css/bootstrap.min.css"; ?> type="text/css">
         <link rel="stylesheet" href=<?php echo base_url()."assets/css/bootstrap-multiselect.css"; ?> type="text/css">
+        <link rel="stylesheet" href=<?php echo base_url()."assets/css/bootstrap_custom_navbar.css"; ?> type="text/css">
         <script type="text/javascript" src=<?php echo base_url()."assets/js/bootstrap.min.js"; ?>></script>
 
         <!-- AMCHARTS -->
@@ -37,13 +38,18 @@ $(document).ready( function () {
 
     </head>
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="<?php echo base_url();?>index.php/home"> <span class="glyphicon glyphicon-home"></span></a>
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul id="navbar_content_left" class="nav navbar-nav">
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul id="navbar_content_left" class="nav navbar-nav navbar-left">
                         <li><a href="#" data-toggle="modal" data-target="#chargerListe"><span class=""></span> Charger une liste</a></li>
                         <?php
                         if ($this->session->userdata("bibliotheque")){

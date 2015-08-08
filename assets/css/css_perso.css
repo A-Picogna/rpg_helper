@@ -42,7 +42,6 @@
 }
 
 body {
-    padding-top: 70px;
     background:url(images/Inquisiton10.png);
     background-position:center center;
 }
@@ -60,24 +59,6 @@ body {
     color: white;
     border: 0px;
 }
-
-/* ======================================================= */
-/* NAVBAR BOOTSTRAP */
-
-
-.navbar-default {
-    background-color: #006699;
-    border-color: #000066;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: white;
-}
-
-.navbar-default .navbar-brand {
-    color: white;
-}
-
 
 /* ======================================================= */
 /* TABLEAUX */
