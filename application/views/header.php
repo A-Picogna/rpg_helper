@@ -35,6 +35,7 @@ $(document).ready(function(){
         <!-- Le CSS perso quand la flemme de chercher dans les 14 trilliards de librairies :D -->
         <link href=<?php echo base_url()."assets/css/css_perso.css"; ?> rel="stylesheet">
         <link href=<?php echo base_url()."assets/css/tableGenerator.css"; ?> rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
 
     </head>
     <body>
