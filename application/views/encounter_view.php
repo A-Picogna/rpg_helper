@@ -77,8 +77,8 @@ foreach ($listeEncounter as $l){
                         </td>
                         <td><p name="info" style="vertical-align:middle; display: inline;"></p></td>
                     </tr>';
-        $listePersonnages[$idPerso] = array( 'BF' => floor(($l['F']/10)*($l['FS'])), 
-                                            'BE' => floor(($l['E']/10)*($l['ES'])), 
+        $listePersonnages[$idPerso] = array( 'BF' => (round($l['F']/10, 0, PHP_ROUND_HALF_DOWN)*($l['FS'])), 
+                                            'BE' => (round($l['E']/10, 0, PHP_ROUND_HALF_DOWN)*($l['ES'])), 
                                             'PV_restants' => $l['PV'],
                                             'PV_max' => $l['PV'],
                                             "PA_tete" => $l["PA_tete"], 
