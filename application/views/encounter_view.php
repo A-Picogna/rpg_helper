@@ -165,11 +165,11 @@ foreach ($listeEncounter as $l){
                         <th>Attributs</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>';
+                <tbody>';
         if (!empty($l["armes"])){
             foreach($l["armes"] as $val){ 
-                echo '                    
+                echo '   
+                    <tr>                 
                         <td>'.$val["nomArme"].'</td>
                         <td>'.$val["groupe"].'</td>
                         <td>'.$val["degats"].'</td>
@@ -180,11 +180,11 @@ foreach ($listeEncounter as $l){
                         <td>'.$val["AT"].'</td>
                         <td>'.$val["rch"].'</td>
                         <td>'.$val["attributs"].'</td>
+                    </tr>
                     ';
             }
         }
         echo ' 
-                    </tr>
                 </tbody>
             </table>
         </div>
