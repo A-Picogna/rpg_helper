@@ -23,6 +23,17 @@
     color: green;
 }
 
+.text-armor{
+    color: green;
+    font-size: 200%;
+    margin-bottom: 0px;
+}
+
+.text-armor-type{
+    font-weight: normal;
+    margin: 1%;
+    text-align: right;
+}
 
 .gras{
     font-weight:bold;
@@ -30,8 +41,8 @@
 
 /* ======================================================= */
 /* AUTRES */
-.creatureTable tr td{
-    
+.formulaire{
+    padding: 0px;
 }
 .account-wall
 {
@@ -76,6 +87,26 @@ body {
 }
 
 .well{
+    padding: inherit;
+    padding-bottom: inherit;
+    background-color: lightgrey;
+    border-color: lightgrey;
+}
+
+.armor{
+    text-align: center;
+    vertical-align: middle;
+    background: url(images/armor.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    border: 0px;
+    padding: 0px;
+    font-weight: bold; 
+}
+
+.footer{
+    padding: 10px;
     text-align: center;
     vertical-align: middle;
     background: url(images/sky-trip.jpg);
@@ -125,7 +156,5 @@ body {
     background-position: center center;     
     font-weight:bold;   
 }
-
-
 
 
