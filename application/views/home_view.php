@@ -18,6 +18,7 @@
             ?>
             var user_index = ($(this).val());
             user_data = user_data[user_index];
+            $("input[name='id']").val($(this).val());
             $("input[name='nom']").val(user_data["nom"]);
             $("input[name='CC']").val(user_data["CC"]);
             $("input[name='CT']").val(user_data["CT"]);
@@ -66,17 +67,16 @@
                     <th>PV</th>
                     <th>Armure</th>
                     <th></th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody class="transparant">
                 <?php
-                    $options = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30);
+                    $options = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
                     $i = 0;
                 if(!empty($listeArchetype)){
                     foreach($listeArchetype as $key=>$val){
                         echo '<tr class = "gras">';
-                            echo '<td>'.str_replace('_', ' ', $key).'</td>';
+                            echo '<td>'.$val['nom'].'</td>';
                             echo '<td>'.form_dropdown($key, $options, 0,'class=""').'</td>';
                             echo '<td>'.$val['CC'].'</td>';
                             echo '<td>'.$val['CT'].'</td>';
@@ -109,12 +109,26 @@
                                         class="link tooltip-link"
                                         data-toggle="tooltip"
                                         data-original-title="Modifier">
-                                            <button type="button" value='.$key.' class="btn btn-primary btn-xs my_button" data-toggle="modal" data-target="#myModal">
+                                            <button type="button" value='.$key.' class="btn btn-primary btn-xs my_button" data-toggle="modal" data-target="#modifArchetype">
                                                 <span class="glyphicon glyphicon-pencil"></span>
                                             </button>
                                         </a>
-                                    </td>';
-                            echo '  <td>
+                                        <a href="#"
+                                        class="link tooltip-link"
+                                        data-toggle="tooltip"
+                                        data-original-title="Ajout Compétence">
+                                            <button type="button" value='.$key.' class="btn btn-success btn-xs my_button" data-toggle="modal" data-target="#ajoutCompetence">
+                                                <span class="glyphicon glyphicon-wrench"></span>
+                                            </button>
+                                        </a>
+                                        <a href="#"
+                                        class="link tooltip-link"
+                                        data-toggle="tooltip"
+                                        data-original-title="Ajout Arme">
+                                            <button type="button" value='.$key.' class="btn btn-warning btn-xs my_button" data-toggle="modal" data-target="#ajoutArme">
+                                                <span class="glyphicon glyphicon-fire"></span>
+                                            </button>
+                                        </a>
                                         <a href="'.base_url().'index.php/gestionListe/supprimerArchetype/'.$key.'"
                                         class="link tooltip-link"
                                         data-toggle="tooltip"
@@ -141,7 +155,7 @@
     </div>
 </div>
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="modifArchetype" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content col-xs-12">
@@ -154,8 +168,9 @@
                     <?php
                         $options = array(1 => 'x1', 2 => 'x2', 3 => 'x3');
                         $options_typeA = array('primitif' => 'Armure Primitive', 'pareBalle' => 'Armure Pare-Balle', 'carapace' => 'Armure Carapace', 'nrj' => 'Armure Energétique');
-                        echo form_open('creationVerif', 'class=""');
+                        echo form_open('modificationVerif', 'class=""');
                         echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+                        echo form_hidden('id', '');
                         echo '<div class="col-xs-6">';
                             echo '<div class="form-group">';
                                 echo form_label('Nom :', 'nom');
@@ -239,10 +254,119 @@
                                 echo form_label('Force surnaturelle :', 'FS');
                                 echo form_dropdown('FS', $options, '','class="form-control"');
                             echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Talents', 'talents');
+                                echo form_multiselect('talents[]', $listeTalents, '','class="form-control"');
+                            echo '</div>';
                         echo '</div>';
                         echo '<div class="col-xs-12">';
                             echo '<div class="form-group">';
                                 echo form_submit('submit', 'Modifier','class="btn btn-lg btn-primary btn-block"');
+                            echo '</div>';
+                        echo '</div>';
+                        echo form_close();
+                    ?>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ajoutCompetence" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content col-xs-12">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title text-center titre">Ajouter une compétence</h1>
+            </div>
+            <div class="modal-body col-xs-12">
+                <div class="col-xs-12">
+                    <?php
+                        echo form_open('ajoutCompetenceVerif', 'class=""');
+                        echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+                        echo form_hidden('id', '');
+                        echo '<div class="col-xs-12">';                            
+                            echo '<div class="form-group">';
+                                echo form_label('Compétence :', 'competence');
+                                echo form_input('competence', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                        echo '</div>';
+                        echo '<div class="col-xs-12">';
+                            echo '<div class="form-group">';
+                                echo form_submit('submit', 'Valider','class="btn btn-lg btn-primary btn-block"');
+                            echo '</div>';
+                        echo '</div>';
+                        echo form_close();
+                    ?>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ajoutArme" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content col-xs-12">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title text-center titre">Ajouter une arme</h1>
+            </div>
+            <div class="modal-body col-xs-12">
+                <div class="col-xs-12">
+                    <?php
+                        $typesDegats =  array('P' => 'Pénétrant', 'I' => 'Impact', 'X' => 'Explosif', 'E' => 'Energétique');
+                        echo form_open('ajoutArmeVerif', 'class=""');
+                        echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+                        echo form_hidden('id', '');
+                        echo '<div class="col-xs-6">';
+                            echo '<div class="form-group">';
+                                echo form_label('Nom de l\'arme :', 'nomArme');
+                                echo form_input('nomArme', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Groupe :', 'groupe');
+                                echo form_input('groupe', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Dégats :', 'degats');
+                                echo form_input('degats', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Type :', 'type');
+                                echo form_dropdown('type', $typesDegats, '','class="form-control"');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Pénétration :', 'pen');
+                                echo form_input('pen', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                        echo '</div>';            
+                        echo '<div class="col-xs-6">';
+                            echo '<div class="form-group">';
+                                echo form_label('Portée :', 'portee');
+                                echo form_input('portee', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Mode :', 'mode');
+                                echo form_input('mode', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('AT :', 'AT');
+                                echo form_input('AT', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Rechargement', 'rch');
+                                echo form_input('rch', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Attributs :', 'attributs');
+                                echo form_input('attributs', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                        echo '</div>';            
+                        echo '<div class="col-xs-12">';
+                            echo '<div class="form-group">';
+                                echo form_submit('submit', 'Valider','class="btn btn-lg btn-primary btn-block"');
                             echo '</div>';
                         echo '</div>';
                         echo form_close();

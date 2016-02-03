@@ -68,12 +68,12 @@
                 </thead>
                 <tbody class="transparant">
                     <?php
-                        $options = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30);
+                        $options = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
                         $i = 0;
                     if(!empty($listeArchetype)){
                         foreach($listeArchetype as $key=>$val){
                             echo '<tr class = "gras">';
-                                echo '<td>'.str_replace('_', ' ', $key).'</td>';
+                                echo '<td>'.$val['nom'].'</td>';
                                 echo '<td>'.form_dropdown($key, $options, 0,'class=""').'</td>';
                                 echo '<td>'.$val['CC'].'</td>';
                                 echo '<td>'.$val['CT'].'</td>';

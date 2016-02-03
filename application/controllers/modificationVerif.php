@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class CreationVerif extends CI_Controller {
+class modificationVerif extends CI_Controller {
     
     function __construct(){
         parent::__construct();
@@ -61,7 +61,7 @@ class CreationVerif extends CI_Controller {
                             "FS" => $this->input->post('FS'),
                             "talents" => $talents,
                            );        
-            $this->Archetype->creerArchetype($tab, $this->session->userdata("bibliotheque"));
+            $this->Archetype->modifierArchetype($tab, $this->session->userdata("bibliotheque"), $this->input->post('id'));
             redirect('home', 'refresh');
         }
     }

@@ -18,6 +18,7 @@ class Home extends CI_Controller {
             }
             else{
                 $data['listeArchetype'] = $this->Archetype->getListeArchetypePerso($this->session->userdata("bibliotheque"));
+                $data['listeTalents'] = $this->Talent->getListeTalents();
                 $this->load->view('header');
                 $this->load->view('home_view', $data); 
             }

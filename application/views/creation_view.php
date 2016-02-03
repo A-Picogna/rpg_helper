@@ -4,13 +4,13 @@
         <div class="account-wall col-xs-12">
             <?php
                 $options = array(1 => 'x1', 2 => 'x2', 3 => 'x3');
-                $options_typeA = array('primitif' => 'Armure Primitive', 'pareBalle' => 'Armure Pare-Balle', 'carapace' => 'Armure Carapace', 'nrj' => 'Armure Energétique');
+                $options_typeA = array("primitif" => "Armure Primitive", "pareBalle" => "Armure Pare-Balle", "carapace" => "Armure Carapace", "nrj" => "Armure Energétique");
                 echo form_open('creationVerif', 'class=""');
                 echo validation_errors('<div class="alert alert-danger gras">', '</div>');
                 echo '<div class="col-xs-6">';
                     echo '<div class="form-group">';
                         echo form_label('Nom :', 'nom');
-                        echo form_input('nom', set_value('nom'), 'class="form-control" placeholder="Only alphanumeric or underscore" ');
+                        echo form_input('nom', set_value('nom'), 'class="form-control" placeholder="" ');
                     echo '</div>';
                     echo '<div class="form-group">';
                         echo form_label('CC :', 'CC');
@@ -89,6 +89,10 @@
                     echo '<div class="form-group">';
                         echo form_label('Force surnaturelle :', 'FS');
                         echo form_dropdown('FS', $options, '','class="form-control"');
+                    echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Talents', 'talents');
+                        echo form_multiselect('talents[]', $listeTalents, '','class="form-control"');
                     echo '</div>';
                 echo '</div>';
                 echo '<div class="col-xs-12">';

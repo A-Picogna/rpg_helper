@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('Archetype');
+$autoload['model'] = array('Archetype','Talent');
 
 
 /* End of file autoload.php */
