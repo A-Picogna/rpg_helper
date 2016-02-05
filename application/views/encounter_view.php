@@ -21,7 +21,7 @@ foreach ($listeEncounter as $l){
                 </li>
                 <li class="list-group-item">
                     <span class="badge alert-success">';
-    if ($l["typeA"] == "nrj"){
+    if ($l["typeA"] == "nrj")
         echo ($l['F']+20);
     else
         echo $l['F'];
