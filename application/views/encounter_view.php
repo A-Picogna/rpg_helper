@@ -20,7 +20,12 @@ foreach ($listeEncounter as $l){
                     Capacité de Tir
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['F'].'</span>
+                    <span class="badge alert-success">';
+    if ($l["typeA"] == "nrj"){
+        echo ($l['F']+20);
+    else
+        echo $l['F'];
+                    echo '</span>
                     Force
                 </li>
                 <li class="list-group-item">
@@ -131,7 +136,7 @@ foreach ($listeEncounter as $l){
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#competences">Compétences</a>
+                            <a data-toggle="collapse" href="#competences">Compétences - Traits - Notes</a>
                         </h4>
                     </div>
                     <div id="competences" class="panel-collapse collapse in">
