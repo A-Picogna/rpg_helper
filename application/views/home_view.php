@@ -317,8 +317,6 @@
                 <div class="col-xs-12">
                     <?php
                         $typesDegats =  array('P' => 'Pénétrant', 'I' => 'Impact', 'X' => 'Explosif', 'E' => 'Energétique');
-                        $typesRech =  array('1/2AC' => '1/2AC','1AC' => '1AC','2AC' => '2AC','3AC' => '3AC');
-                        $typesGroupe =  array('CAC' => 'CAC','Poing' => 'Poing','Base' => 'Base','Lourde' => 'Lourde');
                         echo form_open('ajoutArmeVerif', 'class=""');
                         echo validation_errors('<div class="alert alert-danger gras">', '</div>');
                         echo form_hidden('id', '');
@@ -329,7 +327,7 @@
                             echo '</div>';
                             echo '<div class="form-group">';
                                 echo form_label('Groupe :', 'groupe');
-                                echo form_dropdown('groupe', $typesGroupe, '','class="form-control"');
+                                echo form_input('groupe', '', 'class="form-control" placeholder="" ');
                             echo '</div>';
                             echo '<div class="form-group">';
                                 echo form_label('Dégats :', 'degats');
@@ -359,7 +357,7 @@
                             echo '</div>';
                             echo '<div class="form-group">';
                                 echo form_label('Rechargement', 'rch');
-                                echo form_dropdown('rch', $typesRech, '','class="form-control"');
+                                echo form_input('rch', '', 'class="form-control" placeholder="" ');
                             echo '</div>';
                             echo '<div class="form-group">';
                                 echo form_label('Attributs :', 'attributs');
