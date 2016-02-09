@@ -41,6 +41,7 @@ class Archetype extends CI_Model{
                             "talents" => $carac["talents"],
                             "traits" => $carac["traits"],
                             "competences" => array(),
+                            "pouvoirs" => array(),
                             "armes" => array()
                             );
         $newJsonString = json_encode($data, JSON_UNESCAPED_UNICODE);
@@ -159,6 +160,28 @@ class Archetype extends CI_Model{
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         $data[$id]["competences"][$comp] = $desc;
+        $newJsonString = json_encode($data, JSON_UNESCAPED_UNICODE);
+        file_put_contents($path, $newJsonString); 
+    }
+    
+    function getCompList(){
+        $data = array();
+        $path = './assets/json/competences_list.json'; 
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        return $data;
+    }
+    
+    /* ===================================================== */
+    /* ==================== Pouvoirs ==================== */
+    /* ===================================================== */
+    
+    function ajoutPouvoir($pp, $desc, $nom_liste, $id){
+        $data = array();
+        $path = './assets/json/bibliotheque'.$nom_liste.'.json'; 
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        $data[$id]["pouvoirs"][$pp] = $desc;
         $newJsonString = json_encode($data, JSON_UNESCAPED_UNICODE);
         file_put_contents($path, $newJsonString); 
     }

@@ -109,8 +109,8 @@ foreach ($listeEncounter as $l){
             </div>     
         </div>     
     </div>  
-    <div class="row">
-        <div class="col-xs-5 col-xs-offset-1">  
+    <div class="row col-xs-10 col-xs-offset-1">
+        <div class="col-xs-4">  
             <div class="panel-group">
                 <div class="panel panel-info">
                     <div class="panel-heading">
@@ -135,8 +135,8 @@ foreach ($listeEncounter as $l){
                     </div>
                 </div>
             </div>
-        </div>  
-        <div class="col-xs-5">  
+        </div>
+        <div class="col-xs-4">  
             <div class="panel-group">
                 <div class="panel panel-info">
                     <div class="panel-heading">
@@ -156,7 +156,28 @@ foreach ($listeEncounter as $l){
                     </div>
                 </div>
             </div>
-        </div>  
+        </div> 
+        <div class="col-xs-4">  
+            <div class="panel-group">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#pouvoirs">Pouvoirs</a>
+                        </h4>
+                    </div>
+                    <div id="pouvoirs" class="panel-collapse collapse in">
+                        <ul class="list-group">';
+        if (!empty($l["pouvoirs"])){
+            foreach($l["pouvoirs"] as $key=>$val){ 
+                echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$val.'">'.$key.'</li>';
+            }
+        }
+        echo '
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>    
     </div>  
     <div class="row">
         <div class="col-xs-10 col-xs-offset-1"> 

@@ -22,6 +22,7 @@ class Home extends CI_Controller {
                 $data['listeArchetype'] = $this->Archetype->getListeArchetypePerso($this->session->userdata("bibliotheque"));
                 $data['listeTalents'] = $this->Talent->getListeTalents();
                 $data['listeTraits'] = $this->Talent->getListeTraits();
+                $data['listeCompetences'] = $this->Archetype->getCompList();
                 $this->load->view('header');
                 $this->load->view('home_view', $data); 
             }

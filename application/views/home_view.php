@@ -72,7 +72,7 @@
                 </tr>
             </thead>
             <tbody class="transparant">
-                <?php
+                <?php 
                     $options = array(0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15);
                     $i = 0;
                 if(!empty($listeArchetype)){
@@ -129,6 +129,14 @@
                                         data-original-title="Ajout Arme">
                                             <button type="button" value='.$key.' class="btn btn-warning btn-xs my_button" data-toggle="modal" data-target="#ajoutArme">
                                                 <span class="glyphicon glyphicon-fire"></span>
+                                            </button>
+                                        </a>
+                                        <a href="#"
+                                        class="link tooltip-link"
+                                        data-toggle="tooltip"
+                                        data-original-title="Ajout Pouvoir Psy">
+                                            <button type="button" value='.$key.' class="btn btn-info btn-xs my_button" data-toggle="modal" data-target="#ajoutPouvoir">
+                                                <span class="glyphicon glyphicon-flash"></span>
                                             </button>
                                         </a>
                                         <a href="'.base_url().'index.php/gestionListe/supprimerArchetype/'.$key.'"
@@ -295,7 +303,49 @@
                         echo '<div class="col-xs-12">';                            
                             echo '<div class="form-group">';
                                 echo form_label('Compétence :', 'competence');
-                                echo form_input('competence', '', 'class="form-control" placeholder="" ');
+                                echo form_input('competence', '', 'list="compList" class="form-control" placeholder="" ');
+                                echo '<datalist id="compList">';
+                                foreach ($listeCompetences as $val){
+                                    echo "<option value='$val'>";
+                                }
+                                echo '</datalist>';
+                            echo '</div>';                            
+                            echo '<div class="form-group">';
+                                echo form_label('Description :', 'description');
+                                echo form_textarea('description', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';
+                        echo '</div>';
+                        echo '<div class="col-xs-12">';
+                            echo '<div class="form-group">';
+                                echo form_submit('submit', 'Valider','class="btn btn-lg btn-primary btn-block"');
+                            echo '</div>';
+                        echo '</div>';
+                        echo form_close();
+                    ?>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ajoutPouvoir" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content col-xs-12">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="modal-title text-center titre">Ajouter un Pouvoir Psy</h1>
+            </div>
+            <div class="modal-body col-xs-12">
+                <div class="col-xs-12">
+                    <?php
+                        echo form_open('ajoutPouvoirVerif', 'class=""');
+                        echo validation_errors('<div class="alert alert-danger gras">', '</div>');
+                        echo form_hidden('id', '');
+                        echo '<div class="col-xs-12">';                            
+                            echo '<div class="form-group">';
+                                echo form_label('Nom du Pouvoir Psy:', 'pouvoir');
+                                echo form_input('pouvoir', '', 'class="form-control" placeholder="" ');
                             echo '</div>';                            
                             echo '<div class="form-group">';
                                 echo form_label('Description :', 'description');
@@ -327,7 +377,7 @@
                 <div class="col-xs-12">
                     <?php
                         $typesDegats =  array('P' => 'Pénétrant', 'I' => 'Impact', 'X' => 'Explosif', 'E' => 'Energétique');
-                        $typesRech =  array('1/2AC' => '1/2AC','1AC' => '1AC','2AC' => '2AC','3AC' => '3AC');
+                        $typesRech =  array('-' => '-','1/2AC' => '1/2AC','1AC' => '1AC','2AC' => '2AC','3AC' => '3AC');
                         $typesGroupe =  array('CAC' => 'CAC','Poing' => 'Poing','Base' => 'Base','Lourde' => 'Lourde');
                         echo form_open('ajoutArmeVerif', 'class=""');
                         echo validation_errors('<div class="alert alert-danger gras">', '</div>');
