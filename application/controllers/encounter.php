@@ -32,7 +32,9 @@ class Encounter extends CI_Controller {
             $this->session->set_userdata('encounter', $listeCombat);
             $data['listeEncounter'] = $listeCombat;
             $data['descriptionTalents'] = $this->Talent->getListeTalentsDesc();
+            $data['descriptionTraits'] = $this->Talent->getListeTraitsDesc();
             $data['listeTalents'] = $this->Talent->getListeTalents();
+            $data['listeTraits'] = $this->Talent->getListeTraits();
             $this->load->view('header');
             $this->load->view('encounter_view', $data);        
             $this->load->view('footer');

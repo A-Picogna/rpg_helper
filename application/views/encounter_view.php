@@ -125,6 +125,11 @@ foreach ($listeEncounter as $l){
                 echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$descriptionTalents[$val].'">'.$listeTalents[$val].'</li>';
             }
         }
+        if (!empty($l["traits"])){
+            foreach($l["traits"] as $val){ 
+                echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$descriptionTraits[$val].'">'.$listeTraits[$val].'</li>';
+            }
+        }
         echo '
                         </ul> 
                     </div>
@@ -136,14 +141,14 @@ foreach ($listeEncounter as $l){
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#competences">Compétences - Traits - Notes</a>
+                            <a data-toggle="collapse" href="#competences">Compétences - Notes</a>
                         </h4>
                     </div>
                     <div id="competences" class="panel-collapse collapse in">
                         <ul class="list-group">';
         if (!empty($l["competences"])){
-            foreach($l["competences"] as $val){ 
-                echo '          <li class="list-group-item">'.$val.'</li>';
+            foreach($l["competences"] as $key=>$val){ 
+                echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$val.'">'.$key.'</li>';
             }
         }
         echo '

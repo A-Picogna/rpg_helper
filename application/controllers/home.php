@@ -9,6 +9,8 @@ class Home extends CI_Controller {
     }
     
 	public function index(){
+        //$this->Archetype->splitJsonArray("./assets/json/talents_old(do not delete).json","./assets/json/talents_list.json","./assets/json/talents_desc.json");
+        //$this->Archetype->splitJsonArray("traits_old(do not delete)","traits_list","traits_desc");
         if ($this->session->userdata("bibliotheque")){
             if (!file_exists('./assets/json/bibliotheque'.$this->session->userdata("bibliotheque").'.json')){
                 $this->session->unset_userdata("bibliotheque");
@@ -19,6 +21,7 @@ class Home extends CI_Controller {
             else{
                 $data['listeArchetype'] = $this->Archetype->getListeArchetypePerso($this->session->userdata("bibliotheque"));
                 $data['listeTalents'] = $this->Talent->getListeTalents();
+                $data['listeTraits'] = $this->Talent->getListeTraits();
                 $this->load->view('header');
                 $this->load->view('home_view', $data); 
             }

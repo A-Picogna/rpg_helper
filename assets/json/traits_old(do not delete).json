@@ -41,6 +41,6 @@
   "Taille(Imposante)":"Modificateur de visée +20, Dissimulation -20, Déplacement BA+2",
   "Taille(Impressionante)":"Modificateur de visée +30, Dissimulation -30, Déplacement BA+3",
   "Toxique":"Si touché ou contaminé => test Endurance => si échec => subit 1d10 dmg ignore armure",
-  "Vitesse surnaturelle":"BA*2",
+  "Vitesse surnaturelle":"BAx2",
   "Vol":"Peut voler"
 }

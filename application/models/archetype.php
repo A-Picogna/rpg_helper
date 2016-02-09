@@ -7,6 +7,10 @@ class Archetype extends CI_Model{
         
     }
     
+    /* ==================================================== */
+    /* ==================== ARCHETYPES ==================== */
+    /* ==================================================== */
+    
     function creerArchetype($carac, $nom_liste){
         $data = array();
         $path = './assets/json/bibliotheque'.$nom_liste.'.json'; 
@@ -35,6 +39,7 @@ class Archetype extends CI_Model{
                             "ES" => $carac["ES"],
                             "FS" => $carac["FS"],
                             "talents" => $carac["talents"],
+                            "traits" => $carac["traits"],
                             "competences" => array(),
                             "armes" => array()
                             );
@@ -44,6 +49,7 @@ class Archetype extends CI_Model{
     
     function modifierArchetype($carac, $nom_liste, $id){
         $data = array();
+        $nom_liste = strtolower($nom_liste);
         $path = './assets/json/bibliotheque'.$nom_liste.'.json'; 
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
@@ -67,28 +73,99 @@ class Archetype extends CI_Model{
         $data[$id]["ES"] = $carac["ES"];
         $data[$id]["FS"] = $carac["FS"];
         $data[$id]["talents"] = $carac["talents"];
+        $data[$id]["traits"] = $carac["traits"];
         $newJsonString = json_encode($data, JSON_UNESCAPED_UNICODE);
         file_put_contents($path, $newJsonString);        
     }
     
-    
-    function getListeTalents(){
-        $path = './assets/json/talents.json';
+    function getListeArchetype(){
+        $path = './assets/json/archetypes.json';
         $data = array();
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
         return $data;
     }
     
-    function ajoutCompetence($competence, $nom_liste, $id){
+    function importerArchetype($archetype, $nom_liste){
+        $data = array();
+        $nom_liste = strtolower($nom_liste);
+        $path = './assets/json/bibliotheque'.$nom_liste.'.json';       
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        $data[$archetype] = $this->Archetype->getArchetypeListePublique($archetype);
+        $newJsonString = json_encode($data);
+        file_put_contents($path, $newJsonString);  
+    }
+    
+    function getArchetype($nom, $nom_liste=""){
+        $data = array();
+        $res = array();
+        $nom_liste = strtolower($nom_liste);
+        $path = './assets/json/bibliotheque'.$nom_liste.'.json';       
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        $res = $data[$nom];
+        return $res;
+    }
+    
+    function getArchetypeListePublique($nom){
+        $data = array();
+        $res = array();
+        $path = './assets/json/archetypes.json';       
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        $res = $data[$nom];
+        return $res;
+    }
+    
+    function supprimerArchetype($nom, $nom_liste){
+        $data = array();
+        $nom_liste = strtolower($nom_liste);
+        $path = './assets/json/bibliotheque'.$nom_liste.'.json'; 
+        $jsonString = file_get_contents($path);
+        $data = json_decode($jsonString, true);
+        unset($data[$nom]);
+        $newJsonString = json_encode($data);
+        file_put_contents($path, $newJsonString);  
+    }
+    
+    public function supprimerBibliotheque($nom_liste){
+        $nom_liste = strtolower($nom_liste);
+        $path = './assets/json/bibliotheque'.$nom_liste.'.json'; 
+        unlink($path);
+    }
+    
+    function getListeArchetypePerso($nom_liste){
+        $nom_liste = strtolower($nom_liste);
+        $path = './assets/json/bibliotheque'.$nom_liste.'.json';
+        $data = array();        
+        if (file_exists($path)){
+            $jsonString = file_get_contents($path);
+            $data = json_decode($jsonString, true);
+            return $data;
+        }
+        else{
+            return "";   
+        }
+    }
+    
+    /* ===================================================== */
+    /* ==================== Compétences ==================== */
+    /* ===================================================== */
+    
+    function ajoutCompetence($comp, $desc, $nom_liste, $id){
         $data = array();
         $path = './assets/json/bibliotheque'.$nom_liste.'.json'; 
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
-        array_push($data[$id]["competences"], $competence);
+        $data[$id]["competences"][$comp] = $desc;
         $newJsonString = json_encode($data, JSON_UNESCAPED_UNICODE);
         file_put_contents($path, $newJsonString); 
     }
+    
+    /* =============================================== */
+    /* ==================== Armes ==================== */
+    /* =============================================== */
     
     function ajoutArme($arme, $nom_liste, $id){
         $data = array();
@@ -111,70 +188,17 @@ class Archetype extends CI_Model{
         file_put_contents($path, $newJsonString); 
     }
     
-    function getListeArchetype(){
-        $path = './assets/json/archetypes.json';
-        $data = array();
+    /* =============================================== */
+    /* ==================== Tools ==================== */
+    /* =============================================== */
+    
+    function splitJsonArray($path, $path1, $path2){
         $jsonString = file_get_contents($path);
         $data = json_decode($jsonString, true);
-        return $data;
-    }
-
-    function importerArchetype($archetype, $id){
-        $data = array();
-        $path = './assets/json/bibliotheque'.$id.'.json';       
-        $jsonString = file_get_contents($path);
-        $data = json_decode($jsonString, true);
-        $data[$archetype] = $this->Archetype->getArchetypeListePublique($archetype);
-        $newJsonString = json_encode($data);
-        file_put_contents($path, $newJsonString);  
-    }
-    
-    function getArchetype($nom, $id=""){
-        $data = array();
-        $res = array();
-        $path = './assets/json/bibliotheque'.$id.'.json';       
-        $jsonString = file_get_contents($path);
-        $data = json_decode($jsonString, true);
-        $res = $data[$nom];
-        return $res;
-    }
-    
-    function getArchetypeListePublique($nom){
-        $data = array();
-        $res = array();
-        $path = './assets/json/archetypes.json';       
-        $jsonString = file_get_contents($path);
-        $data = json_decode($jsonString, true);
-        $res = $data[$nom];
-        return $res;
-    }
-    
-    function supprimerArchetype($nom, $id){
-        $data = array();
-        $path = './assets/json/bibliotheque'.$id.'.json'; 
-        $jsonString = file_get_contents($path);
-        $data = json_decode($jsonString, true);
-        unset($data[$nom]);
-        $newJsonString = json_encode($data);
-        file_put_contents($path, $newJsonString);  
-    }
-    
-    public function supprimerBibliotheque($id){
-        $path = './assets/json/bibliotheque'.$id.'.json'; 
-        unlink($path);
-    }
-    
-    function getListeArchetypePerso($id){
-        $path = './assets/json/bibliotheque'.$id.'.json';
-        $data = array();        
-        if (file_exists($path)){
-            $jsonString = file_get_contents($path);
-            $data = json_decode($jsonString, true);
-            return $data;
-        }
-        else{
-            return "";   
-        }
+        $JsonString1 = json_encode(array_keys($data), JSON_UNESCAPED_UNICODE);
+        $JsonString2 = json_encode(array_values($data), JSON_UNESCAPED_UNICODE);
+        file_put_contents($path1, $JsonString1);        
+        file_put_contents($path2, $JsonString2);        
     }
 }
 

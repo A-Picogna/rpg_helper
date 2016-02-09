@@ -19,6 +19,7 @@ class GestionListe extends CI_Controller {
     public function creerArchetype(){
 		$this->load->view('header');
         $data['listeTalents'] = $this->Talent->getListeTalents();
+        $data['listeTraits'] = $this->Talent->getListeTraits();
 		$this->load->view('creation_view', $data);
 		$this->load->view('footer');
 	}

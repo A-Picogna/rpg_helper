@@ -39,6 +39,8 @@
             $("select[name='typeA']").val(user_data["typeA"]);
             $("select[name='ES']").val(user_data["ES"]);
             $("select[name='FS']").val(user_data["FS"]);
+            $("select[name='talents[]']").val(user_data["talents"]);
+            $("select[name='traits[]']").val(user_data["traits"]);
         });
     });
 
@@ -212,6 +214,10 @@
                                 echo form_label('Sociabilite :', 'Soc');
                                 echo form_input('Soc', '', 'class="form-control" placeholder="" ');
                             echo '</div>';
+                            echo '<div class="form-group">';
+                                echo form_label('Traits :', 'traits');
+                                echo form_multiselect('traits[]', $listeTraits, '','class="form-control"');
+                            echo '</div>';
                         echo '</div>';
                         echo '<div class="col-xs-6">';
                             echo '<div class="form-group">';
@@ -255,7 +261,7 @@
                                 echo form_dropdown('FS', $options, '','class="form-control"');
                             echo '</div>';
                             echo '<div class="form-group">';
-                                echo form_label('Talents', 'talents');
+                                echo form_label('Talents :', 'talents');
                                 echo form_multiselect('talents[]', $listeTalents, '','class="form-control"');
                             echo '</div>';
                         echo '</div>';
@@ -290,6 +296,10 @@
                             echo '<div class="form-group">';
                                 echo form_label('Compétence :', 'competence');
                                 echo form_input('competence', '', 'class="form-control" placeholder="" ');
+                            echo '</div>';                            
+                            echo '<div class="form-group">';
+                                echo form_label('Description :', 'description');
+                                echo form_textarea('description', '', 'class="form-control" placeholder="" ');
                             echo '</div>';
                         echo '</div>';
                         echo '<div class="col-xs-12">';

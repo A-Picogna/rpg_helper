@@ -48,6 +48,10 @@
                         echo form_label('Sociabilite :', 'Soc');
                         echo form_input('Soc', set_value('Soc'), 'class="form-control" placeholder="number only" ');
                     echo '</div>';
+                    echo '<div class="form-group">';
+                        echo form_label('Traits :', 'traits');
+                        echo form_multiselect('traits[]', $listeTraits, '','class="form-control"');
+                    echo '</div>';
                 echo '</div>';
                 echo '<div class="col-xs-6">';
                     echo '<div class="form-group">';
@@ -91,7 +95,7 @@
                         echo form_dropdown('FS', $options, '','class="form-control"');
                     echo '</div>';
                     echo '<div class="form-group">';
-                        echo form_label('Talents', 'talents');
+                        echo form_label('Talents :', 'talents');
                         echo form_multiselect('talents[]', $listeTalents, '','class="form-control"');
                     echo '</div>';
                 echo '</div>';

@@ -8,7 +8,8 @@ class ajoutCompetenceVerif extends CI_Controller {
     function index(){
         $this->load->library('form_validation');
 
-        $this->form_validation->set_rules('competence', 'Compétence', 'trim|required|max_length[100]');
+        $this->form_validation->set_rules('competence', 'Compétence', 'trim|required|max_length[50]');
+        $this->form_validation->set_rules('description', 'Description', 'trim|required|max_length[200]');
 
         if($this->form_validation->run() == FALSE){
             $data['listeArchetype'] = $this->Archetype->getListeArchetypePerso($this->session->userdata("bibliotheque"));
@@ -18,8 +19,9 @@ class ajoutCompetenceVerif extends CI_Controller {
             $this->load->view('footer');
         }
         else{   
-            $res = $this->input->post('competence');      
-            $this->Archetype->ajoutCompetence($res, $this->session->userdata("bibliotheque"), $this->input->post('id'));
+            $comp = $this->input->post('competence');
+            $desc = $this->input->post('description');      
+            $this->Archetype->ajoutCompetence($comp, $desc, $this->session->userdata("bibliotheque"), $this->input->post('id'));
             redirect('home', 'refresh');
         }
     }

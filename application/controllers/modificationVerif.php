@@ -32,11 +32,17 @@ class modificationVerif extends CI_Controller {
             $this->load->view('creation_view', $data);
             $this->load->view('footer');
         }
-        else{   
+        else{              
+            $talents = array();
+            $traits = array();
             if(!empty($this->input->post('talents'))){
-                $talents = array();
                 foreach($this->input->post('talents') as $val){
                     array_push($talents, $val);
+                }
+            }
+            if(!empty($this->input->post('traits'))){
+                foreach($this->input->post('traits') as $val){
+                    array_push($traits, $val);
                 }
             }
             $tab = array(   "nom" => $this->input->post('nom'),
@@ -59,7 +65,8 @@ class modificationVerif extends CI_Controller {
                             "typeA" => $this->input->post('typeA'),
                             "ES" => $this->input->post('ES'),
                             "FS" => $this->input->post('FS'),
-                            "talents" => $talents,
+                            "talents" => $talents,                         
+                            "traits" => $traits
                            );        
             $this->Archetype->modifierArchetype($tab, $this->session->userdata("bibliotheque"), $this->input->post('id'));
             redirect('home', 'refresh');

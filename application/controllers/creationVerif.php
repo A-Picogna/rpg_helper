@@ -29,14 +29,21 @@ class CreationVerif extends CI_Controller {
         if($this->form_validation->run() == FALSE){
             $this->load->view('header');
             $data['listeTalents'] = $this->Talent->getListeTalents();
+            $data['listeTraits'] = $this->Talent->getListeTraits();
             $this->load->view('creation_view', $data);
             $this->load->view('footer');
         }
-        else{   
+        else{              
+            $talents = array();
+            $traits = array();
             if(!empty($this->input->post('talents'))){
-                $talents = array();
                 foreach($this->input->post('talents') as $val){
                     array_push($talents, $val);
+                }
+            }
+            if(!empty($this->input->post('traits'))){
+                foreach($this->input->post('traits') as $val){
+                    array_push($traits, $val);
                 }
             }
             $tab = array(   "nom" => $this->input->post('nom'),
@@ -60,6 +67,7 @@ class CreationVerif extends CI_Controller {
                             "ES" => $this->input->post('ES'),
                             "FS" => $this->input->post('FS'),
                             "talents" => $talents,
+                            "traits" => $traits
                            );        
             $this->Archetype->creerArchetype($tab, $this->session->userdata("bibliotheque"));
             redirect('home', 'refresh');
