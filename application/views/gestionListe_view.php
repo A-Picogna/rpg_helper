@@ -75,7 +75,7 @@
                                             </button>
                                         </a>
                                     </td>';
-                            echo '<td>'.str_replace('_', ' ', $key).'</td>';
+                            echo '<td>'.$val['nom'].'</td>';
                             echo '<td>'.$val['CC'].'</td>';
                             echo '<td>'.$val['CT'].'</td>';
                             echo '<td>'.$val['F'];
