@@ -29,10 +29,8 @@
         ],
         "traits": [],
         "competences": {
-            "Connaissances générales (Imperium)": "connaissance des secteurs, segmantae et mondes les plus célèbres de l'Imperium",
-            "Interrogatoire (FM)": "FM(+ bonus comp) contre FM => 1 réponse par degrés de réussite, si échec sérieux => victime subit 1d10 + votre bonus de FM de dmg. 1 test dure 1d5 heure, cible gagne 1 niveau de fatigue.",
-            "Langue (bas gothique)": "Langage commun de l'Imperium",
-            "Vigilance (Per)": "Test pour repérer un ennemi planqué"
+            "Compétences": "Connaissances générales (Imperium) (Int), Interrogatoire (FM), Langue (bas gothique) (Int), Vigilance (Per).",
+            "Equipement": "uniforme, 2 chargeurs pour automatique, microvox."
         },
         "pouvoirs": [],
         "armes": {
@@ -94,11 +92,8 @@
         ],
         "traits": [],
         "competences": {
-            "Acrobatie (Ag)": "Spécial : test d'acrobatie pour se désengager avec 1 demi-action et peut utiliser acrobatie pour sauter au lieu de force/agilité",
-            "Connaissances générales (pègre)": "Connaissance du crime organisé et des groupes séditieux au sein de l'imperium",
-            "Connaissances scholastiques (jugements) +10": "connaissance des sanctions pour les nombreux crimes et hérésies punissables selon le droit impérial",
-            "Psychologie (Per)": "Contre : Charisme, Duperie, Intimidation",
-            "Equipement": "microvox, photoverres, respirateur, 36 cartouche de fusil à pompe, 18 cartouches de balles tueuses, 1d10+5 trônes"
+            "Compétences": "Acrobatie (Ag), Connaissances générales (pègre) (Int), Connaissances scholastiques (jugements +10) (Int), Interrogatoire +10 (FM), Langue (bas gothique) (Int), Psychologie (Per), Vigilance (Per).",
+            "Equipement": "microvox, photoverres, respirateur, 36 cartouches de fusil à pompe de combat, 18 cartouches de balles tueuses de fusil à pompe de combat, 1d10+5 trônes."
         },
         "pouvoirs": [],
         "armes": {
@@ -170,7 +165,10 @@
             "0",
             "6"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Connaissances interdites (Warp +10) (Int), Langage secret (acolyte) (Int), Langue (bas gothique +10, haut gothique +10) (Int), Psyniscience +20 (Per).",
+            "Equipement": "robe à capuche."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb28e39db37": {
@@ -217,7 +215,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Déplacement silencieux +10 (Ag), Dissimulation +10 (Ag), Duperie +10 (Soc), Enquête (Soc), Escalade (F), Esquive +10 (Ag), Évaluation (Int), Filature (Ag), Intimidation (F), Intrusion (Ag), Langue (bas gothique) (Int), Résistance aux intoxications (E), Vigilance (Per). ",
+            "Equipement": "vêtements cool, 2 chargeurs pour automatique, 1d5 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb294b73505": {
@@ -284,7 +285,10 @@
             "190"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Conduite (véhicules terrestres) (Ag), Connaissances générales (Imperium) (Int), Déplacement silencieux (Ag), Dissimulation (Ag), Enquête (Soc), Esquive (Ag), Filature (Ag), Interrogatoire (FM), Intimidation +10 (F), Intrusion (Ag), Langue (bas gothique) (Int), Medicae (Int), Pistage (Int), Vigilance +10 (Per).",
+            "Equipement": "vêtements élégants, 3 chargeurs pour canon de poing, photoverres, respirateur, menottes, 1d10 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb29d626608": {
@@ -348,7 +352,10 @@
         "FS": "1",
         "talents": [],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Langue (bas gothique) (Int), Métier (un au choix), Vigilance (Per). ",
+            "Equipement": "simple tenue de citoyen, 1d5–1 trônes."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -381,7 +388,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Connaissances interdites (une au choix) (Int), Duperie (Soc), Langue (bas gothique) (Int), Métier (un au choix), Vigilance (Per).",
+            "Equipement": "robes rituelles, 2 chargeurs pour canon de poing, faux papiers."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2a6887f1e": {
@@ -437,7 +447,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Connaissances interdites (une au choix) (Int), Duperie (Soc), Langue (bas gothique) (Int), Métier (un au choix), Vigilance (Per). Talents : Foi inébranlable, Formation aux armes de corps à corps (primitives), Formation aux armes de poing (MS).",
+            "Equipement": "robes rituelles, 1 chargeur pour automatique, faux papiers."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2ad483803": {
@@ -496,7 +509,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Codes secrets (occulte) (Int), Connaissances générales (Imperium) (Int), Connaissances interdites (une au choix +10) (Int), Duperie +10 (Soc), Langage secret (un au choix) (Int), Langue (bas gothique) (Int), Métier (un au choix), Vigilance (Per).",
+            "Equipement": "robes rituelles, 1 chargeur pour automatique, faux papiers."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2ae79164d": {
@@ -551,7 +567,10 @@
             "1",
             "19"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Métier (un au choix +10).",
+            "Equipement": "microvox interne (pour recevoir/relayer des instructions uniquement)."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -578,7 +597,10 @@
         "FS": "1",
         "talents": [],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Langue (bas gothique) (Int), Métier (un au choix), Vigilance (Per).",
+            "Equipement": "1d5–2 trônes."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -607,7 +629,10 @@
             "171"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Langue (bas gothique) (Int), Métier (au choix), Vigilance (Per).",
+            "Equipement": "simple tenue de citoyen, 1d5–1 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2b96a9719": {
@@ -654,7 +679,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Duperie (Soc), Intimidation (F), Langue (bas gothique) (Int), Résistance aux intoxications (E), Vigilance (Per).",
+            "Equipement": "vêtements élimés, 2 doses de slaught, 1d5 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2bd12af11": {
@@ -712,7 +740,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Chimiomaîtrise (Int), Connaissances générales (technologie) (Int), Connaissances scholastiques (une au choix) (Int) ou Medicae (Int), Duperie (Soc), Escalade (F), Évaluation (Int), Intimidation (F), Langue (bas gothique) (Int), Résistance aux intoxications (E), Technomaîtrise +10 (Int), Vigilance (Per).",
+            "Equipement": "recycleur, vêtements, tablette de données, 1 chargeur pour pistolet laser, 1d10 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2cc64474d": {
@@ -768,7 +799,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Alphabétisation (Int), Commandement (Soc), Connaissances générales (Imperium) (Int), Duperie (Soc), Évaluation +10 (Int), Langue (bas gothique, haut gothique) (Int), Logique (Int), Marchandage +10 (Soc), Métier (un au choix), Vigilance (Per).",
+            "Equipement": "vêtements à la mode, microvox crypté personnel, sceau de guilde/cartel commercial, tablette de données, bijoux d’une valeur de 1d5x10 trônes, 3d10 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2d7f6f8d0": {
@@ -808,7 +842,10 @@
         "FS": "1",
         "talents": [],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (technologie) (Int), Langue (bas gothique) (Int), Métier (un au choix), Technomaîtrise (Int), Vigilance (Per).",
+            "Equipement": "outils industriels, outil combiné."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -837,7 +874,10 @@
             "167"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (locales) (Int), Escalade (F), Langue (bas gothique) (Int), Survie (Int).",
+            "Equipement": "loques, outil combiné, 1d5–3 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2db91df36": {
@@ -880,7 +920,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Codes secrets (occulte) (Int), Connaissances générales (pègre) (Int), Déplacement silencieux (Ag), Dissimulation (Ag), Escalade (F), Intimidation (F), Langue (bas gothique) (Int), Survie (Int), Vigilance (Per).",
+            "Equipement": "haillons, ordures."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2dda09c22": {
@@ -940,7 +983,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Alphabétisation (Int), Baratin (Soc), Charisme (Soc), Commandement (Soc), Connaissances générales (Imperium) (Int), Connaissances interdites (une au choix) (Int), Duperie +10 (Soc), Escamotage (Ag), Interrogatoire (FM), Jeu (Int), Langue (bas gothique, haut gothique) (Int), Métier (un au choix), Résistance aux intoxications (E), Vigilance (Per).",
+            "Equipement": "vêtements à la mode, bijoux d’une valeur de 1d5x10 trônes, 3d10 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2e4de717f": {
@@ -1007,7 +1053,10 @@
             "70"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Alphabétisation (Int), Charisme (Soc), Connaissances générales (Credo impérial) (Int), Connaissances scholastiques (Credo impérial +10) (Int), Langue (bas gothique, haut gothique) (Int), Vigilance (Per).",
+            "Equipement": "robe de prêtre, livre de prières, nombreux petits objets de dévotion."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -1039,7 +1088,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Duperie (Soc), Intimidation (F), Langue (bas gothique) (Int), Résistance aux intoxications (E), Vigilance (Per).",
+            "Equipement": "vêtements élimés, 2 chargeurs pour automatique, 1d5 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2ee82cac5": {
@@ -1096,7 +1148,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (pègre) (Int), Dissimulation (Ag), Duperie (Soc), Intimidation (F), Langue (bas gothique) (Int), Résistance aux intoxications (E), Vigilance (Per).",
+            "Equipement": "haillons, 2 doses d’obscura."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2f6784be4": {
@@ -1140,7 +1195,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Baratin (Soc), Chimiomaîtrise (Int), Connaissances générales (pègre) (Int), Duperie +10 (Soc), Intimidation (F), Intrusion (Ag), Langue (bas gothique) (Int), Marchandage (Soc), Résistance aux intoxications +10 (E), Vigilance (Per).",
+            "Equipement": "vêtements chics, 2 chargeurs de balles tueuses pour pistolet-mitrailleur, 1d10 trônes."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb2ff070677": {
@@ -1202,7 +1260,10 @@
             "19",
             "21"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Métier (un au choix +10).",
+            "Equipement": "microvox interne (pour recevoir/relayer des instructions uniquement), réserve de munitions équivalente à 3 chargeurs."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb303c537ea": {
@@ -1263,7 +1324,10 @@
             "19",
             "21"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Vigilance +10 (Per).",
+            "Equipement": "microvox interne (pour recevoir/relayer des instructions uniquement)."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb30dfa8e5e": {
@@ -1318,7 +1382,10 @@
             "1",
             "19"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "aucune.",
+            "Equipement": "microvox interne (pour recevoir/relayer des instructions uniquement), photoverres."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb313845c6e": {
@@ -1364,7 +1431,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Connaissances générales (Imperium) (Int), Escalade (F), Interrogatoire (FM), Langue (bas gothique) (Int), Vigilance (Per).",
+            "Equipement": "uniforme, 2 chargeurs pour automatique, microvox, respirateur, photoverres."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb31e32974e": {
@@ -1423,7 +1493,10 @@
             "181"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Codes secrets (occulte), Connaissances générales (Imperium) (Int), Connaissances interdites (une au choix +10) (Int), Duperie +10 (Soc), Langage secret (un au choix) (Int), Langue (bas gothique) (Int), Métier (un au choix), Vigilance (Per).",
+            "Equipement": "robe noire et ample, 1 chargeur pour automatique, faux papiers d’identité, colifichets étranges, amulette profane, regard dément."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3236dbade": {
@@ -1490,7 +1563,10 @@
             "182"
         ],
         "traits": [],
-        "competences": [],
+        "competences": {
+            "Compétences": "Chimiomaîtrise (Int), Conduite (une au choix) (Ag), Connaissances générales (technologie) (Int), Connaissances scholastiques (une au choix) (Int), Langage secret (technologique +10) (Int), Langue (bas gothique) (Int), Logique +10 (Int), Pilotage (un au choix) (Ag), Technomaîtrise +10 (Int), Vigilance (Per).",
+            "Equipement": "unité d’impulsion cérébrale et 1d5 autres implants (cf. page 153), outils, respirateur, tablette de données, cogitateur personnel, 2 chargeurs pour pistolet laser."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb32e1f2b72": {
@@ -1550,7 +1626,10 @@
             "30",
             "39"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3a39a3546": {
@@ -1599,7 +1678,10 @@
             "21",
             "23"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Déplacement silencieux (Ag), Dissimulation (Ag), Duperie (imitation des voix et des sons uniquement +20) (Soc), Escalade +20 (F), Esquive +10 (Ag), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3a70d13a6": {
@@ -1647,7 +1729,10 @@
             "30",
             "38"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3aa79181e": {
@@ -1700,7 +1785,10 @@
             "21",
             "30"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Déplacement silencieux (Ag), Dissimulation +10 (Ag), Pistage +20 (Int), Vigilance +20 (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3abfd7166": {
@@ -1748,7 +1836,10 @@
             "29",
             "43"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Langue (une au choix) (Int), Vigilance +10 (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -1788,7 +1879,10 @@
             "21",
             "25"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Esquive (Ag), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3afcb17d6": {
@@ -1842,7 +1936,10 @@
             "21",
             "24"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Acrobatie (Ag), Esquive (Ag), Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3b2ed36ce": {
@@ -1889,7 +1986,10 @@
             "21",
             "24"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3b493ff6e": {
@@ -1939,7 +2039,10 @@
             "24",
             "43"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3b767b88e": {
@@ -1987,7 +2090,10 @@
             "29",
             "43"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Psyniscience +10 (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -2022,7 +2128,10 @@
             "24",
             "31"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Langue (une au choix) (Int), Psyniscience +20 (Per), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3be441ac6": {
@@ -2071,7 +2180,10 @@
             "21",
             "24"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Déplacement silencieux +20 (Ag), Dissimulation +30 (Ag), Esquive (Ag), Filature +20 (Ag), Interrogatoire (FM), Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": []
     },
@@ -2105,7 +2217,10 @@
             "21",
             "24"
         ],
-        "competences": [],
+        "competences": {
+            "Compétences": "Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
         "pouvoirs": [],
         "armes": {
             "56bb3c3ebaf85": {
