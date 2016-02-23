@@ -1840,7 +1840,9 @@
             "Compétences": "Langue (une au choix) (Int), Vigilance +10 (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Présence démoniaque": "les créatures vivantes situées dans un rayon de 25 mètres d’une apparition astrale sont prises de frisson et se sentent mal à l’aise. Les ombres paraissent particulièrement épaisses ;les gens entendent et aperçoivent des résidus d’événements passés. Les animaux sont agités et paniquent facilement, alors que les machines sont victimes de toutes sortes de pépins et de pannes. Toutes les créatures subissent un malus de –10 aux tests de Force Mentale."
+        },
         "armes": []
     },
     "56bb14b640099": {
@@ -1883,7 +1885,10 @@
             "Compétences": "Esquive (Ag), Vigilance (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Présence démoniaque": "une zone de 25 mètres de rayon ayant pour centre le démon est imprégnée de radiations du Warp. Ellesprennent la forme d’une odeur de sang très prononcée, déclenchent de violentes nausées et semblent émettre des hurlements d’agonie à peine audibles. Tous les personnages subissent un malus de –10 aux tests de Force Mentale tant qu’ils sont dans la zone.",
+            "Saigneur": "chaque fois que le Démon du Charnier tue une créature vivante, il se débarrasse de 1d10 points de dégâts."
+        },
         "armes": {
             "56bb3afcb17d6": {
                 "nomArme": "Dents et griffes",
@@ -1940,7 +1945,10 @@
             "Compétences": "Acrobatie (Ag), Esquive (Ag), Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Charme mortel": "les créatures vivantes qui regardent ou affrontent une démonette doivent réussir un test de Force Mentale par round sous peine de ne pouvoir entreprendre qu’une demi-action ce round-ci.",
+            "Présence démoniaque": "toutes les créatures situées dans un rayon de 20 mètres subissent un malus de –10 aux tests de Force Mentale."
+        },
         "armes": {
             "56bb3b2ed36ce": {
                 "nomArme": "Pince de crabe",
@@ -1990,7 +1998,9 @@
             "Compétences": "Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Présence démoniaque": "toutes les créatures situées dans un rayon de 20 mètres subissent un malus de –10 aux tests de Force Mentale."
+        },
         "armes": {
             "56bb3b493ff6e": {
                 "nomArme": "Dents ou griffes",
@@ -2043,7 +2053,9 @@
             "Compétences": "Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Présence démoniaque": "toutes les créatures situées dans un rayon de 20 mètres subissent un malus de –10 aux tests de Force Mentale."
+        },
         "armes": {
             "56bb3b767b88e": {
                 "nomArme": "Dents ou griffes",
@@ -2080,7 +2092,9 @@
         "typeA": "primitif",
         "ES": "2",
         "FS": "1",
-        "talents": [],
+        "talents": [
+            "82"
+        ],
         "traits": [
             "4",
             "12",
@@ -2094,7 +2108,12 @@
             "Compétences": "Psyniscience +10 (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Forme d'esprit": "l’esprit immonde est parfaitement invisible, mais il est possible de le détecter par le biais de Psyniscience et de tout matériel capable de noter les perturbations warp. Ceux qui n’ont ni le talent ni le matériel nécessaire ont tout de même droit à un test de Vigilance Assez difficile (–10) pour déceler sa présence s’il est tout proche. Cela se traduit par un sentiment de malaise, un frisson soudain ou une puanteur abominable.",
+            "Détection des présences": "Seuil 7, 1/2AC, prolongeable => Detecte les créatures vivante dans les 50m + 10m par tranche de 5 au dessus du seuil",
+            "Hululement warp": "Seuil 8, 1AC, pas prolongeable => Long cri perçant qui noie tout les autres sons pdt 1 round dans les 50m + 10m par tranche de 5 au dessus du seuil",
+            "Mains spectrales": "Seuil 10, 1AC, pas prolongeable => Manipule grossièrement un objet non-vivants dans les 30m"
+        },
         "armes": []
     },
     "56bb2664ed14a": {
@@ -2118,7 +2137,9 @@
         "typeA": "primitif",
         "ES": "2",
         "FS": "1",
-        "talents": [],
+        "talents": [
+            "84"
+        ],
         "traits": [
             "1",
             "4",
@@ -2132,7 +2153,13 @@
             "Compétences": "Langue (une au choix) (Int), Psyniscience +20 (Per), Vigilance (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Flottement": "Seuil 8, 1/2AC, prolongeable => Peut se déplacer veritcalement jusqu'a 5m, peut servir à arrêter une chute mais test FM -10 pour réussir",
+            "Hurlement psychique": "Seuil 18, 1/2AC, pas prolongeable => Toutes cibles désignées doivent faire test FM sinon encaisse BFM niveaux de fatigue",
+            "Projectile de feu": "Seuil 11, 1/2AC, pas prolongeable => test FM => boule de feu à 100m qui inflige 1d10+5E, +1 projectile par tranche de 5 au dessus du seuil",
+            "Feu de Tzeentch": "les horreurs sont immunisées contre les périls du Warp.",
+            "Présence démoniaque": "toutes les créatures situées dans un rayon de 20 mètres subissent un malus de –10 aux tests de Force Mentale."
+        },
         "armes": {
             "56bb3be441ac6": {
                 "nomArme": "Dents ou griffes",
@@ -2184,7 +2211,10 @@
             "Compétences": "Déplacement silencieux +20 (Ag), Dissimulation +30 (Ag), Esquive (Ag), Filature +20 (Ag), Interrogatoire (FM), Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Regard d'oubli": "SP : 5 ; 10 m ; une cible ; test de Force Mentale ou 1d10 points en moins en Intelligence et gain de 1 point de Folie.",
+            "Présence démoniaque": "toutes les créatures situées dans un rayon de 20 mètres subissent un malus de –10 aux tests de Force Mentale."
+        },
         "armes": []
     },
     "56bb2727b6c0e": {
@@ -2221,7 +2251,11 @@
             "Compétences": "Langue (une au choix) (Int), Psyniscience (Per), Vigilance (Per).",
             "Equipement": "aucun."
         },
-        "pouvoirs": [],
+        "pouvoirs": {
+            "Infection des blessures": "toutes les blessures infligées par le portepeste s’infectent automatiquement.",
+            "Présence démoniaque": "toutes les créatures situées dans un rayon de 20 mètres subissent un malus de –10 aux tests de Force Mentale.",
+            "Vomissure": "au moyen d’une demi-action, le portepeste est en mesure de vomir sur toute cible adjacente. Il doit cependant réussir un test de Capacité de Tir pour toucher son adversaire. La cible peut esquiver l’attaque, mais elle ne peut pas la parer. En cas de succès, la vomissure inflige 1d10+5 points de dégâts. En lieu et place de dégâts critiques, elle réduit de 3d10 points l’Endurance de la victime."
+        },
         "armes": {
             "56bb3c3ebaf85": {
                 "nomArme": "Dents ou griffes",
@@ -2258,6 +2292,75 @@
                 "AT": "-",
                 "rch": "-",
                 "attributs": "Si dégats critiques => perd 3d10 Endu"
+            }
+        }
+    },
+    "56cc8fd9b28a0": {
+        "nom": "Sanguinaire",
+        "CC": "55",
+        "CT": "25",
+        "F": "55",
+        "E": "40",
+        "Ag": "30",
+        "Per": "45",
+        "Int": "30",
+        "FM": "40",
+        "Soc": "10",
+        "PV": "15",
+        "PA_tete": "6",
+        "PA_bd": "6",
+        "PA_bg": "6",
+        "PA_corps": "6",
+        "PA_jd": "6",
+        "PA_jg": "6",
+        "typeA": "primitif",
+        "ES": "2",
+        "FS": "1",
+        "talents": [
+            "8",
+            "68"
+        ],
+        "traits": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "12",
+            "17",
+            "21",
+            "24"
+        ],
+        "competences": {
+            "Compétences": "Psyniscience (Per), Langue (une au choix) (Int), Vigilance (Per).",
+            "Equipement": "aucun."
+        },
+        "pouvoirs": {
+            "Présence démoniaque": "toutes les créatures situées dans un rayon de 20 mètres subissent un malus de –10 aux tests de Force Mentale."
+        },
+        "armes": {
+            "56cc90993ba48": {
+                "nomArme": "Hache lourde",
+                "groupe": "CAC",
+                "degats": "2d10+5",
+                "type": "P",
+                "pen": "4",
+                "portee": "-",
+                "mode": "-",
+                "AT": "-",
+                "rch": "-",
+                "attributs": "encombrante"
+            },
+            "56cc90cca78d8": {
+                "nomArme": "Dents ou griffes",
+                "groupe": "CAC",
+                "degats": "1d10+5",
+                "type": "P",
+                "pen": "0",
+                "portee": "-",
+                "mode": "-",
+                "AT": "-",
+                "rch": "-",
+                "attributs": "déchirante, warp"
             }
         }
     }
