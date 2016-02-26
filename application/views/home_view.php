@@ -118,7 +118,7 @@
                                         <a href="#"
                                         class="link tooltip-link"
                                         data-toggle="tooltip"
-                                        data-original-title="Ajout Compétence">
+                                        data-original-title="Ajout Note">
                                             <button type="button" value='.$key.' class="btn btn-success btn-xs my_button" data-toggle="modal" data-target="#ajoutCompetence">
                                                 <span class="glyphicon glyphicon-wrench"></span>
                                             </button>
@@ -134,7 +134,7 @@
                                         <a href="#"
                                         class="link tooltip-link"
                                         data-toggle="tooltip"
-                                        data-original-title="Ajout Pouvoir Psy">
+                                        data-original-title="Ajout Pouvoir">
                                             <button type="button" value='.$key.' class="btn btn-info btn-xs my_button" data-toggle="modal" data-target="#ajoutPouvoir">
                                                 <span class="glyphicon glyphicon-flash"></span>
                                             </button>
@@ -292,7 +292,7 @@
         <div class="modal-content col-xs-12">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h1 class="modal-title text-center titre">Ajouter une compétence</h1>
+                <h1 class="modal-title text-center titre">Ajouter une Note</h1>
             </div>
             <div class="modal-body col-xs-12">
                 <div class="col-xs-12">
@@ -302,7 +302,7 @@
                         echo form_hidden('id', '');
                         echo '<div class="col-xs-12">';                            
                             echo '<div class="form-group">';
-                                echo form_label('Compétence :', 'competence');
+                                echo form_label('Note :', 'competence');
                                 echo form_input('competence', '', 'list="compList" class="form-control" placeholder="" ');
                                 echo '<datalist id="compList">';
                                 foreach ($listeCompetences as $val){
@@ -311,7 +311,7 @@
                                 echo '</datalist>';
                             echo '</div>';                            
                             echo '<div class="form-group">';
-                                echo form_label('Description :', 'description');
+                                echo form_label('Description : (facultatif)', 'description');
                                 echo form_textarea('description', '', 'class="form-control" placeholder="" ');
                             echo '</div>';
                         echo '</div>';

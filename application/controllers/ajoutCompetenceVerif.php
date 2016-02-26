@@ -9,7 +9,7 @@ class ajoutCompetenceVerif extends CI_Controller {
         $this->load->library('form_validation');
 
         $this->form_validation->set_rules('competence', 'Compétence', 'trim|required|max_length[50]');
-        $this->form_validation->set_rules('description', 'Description', 'trim|required|max_length[200]');
+        $this->form_validation->set_rules('description', 'Description', 'trim|max_length[500]');
 
         if($this->form_validation->run() == FALSE){
             $data['listeArchetype'] = $this->Archetype->getListeArchetypePerso($this->session->userdata("bibliotheque"));

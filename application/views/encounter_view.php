@@ -141,7 +141,7 @@ foreach ($listeEncounter as $l){
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#competences">Compétences - Notes</a>
+                            <a data-toggle="collapse" href="#competences">Notes</a>
                         </h4>
                     </div>
                     <div id="competences" class="panel-collapse collapse in">
