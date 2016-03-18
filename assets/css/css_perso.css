@@ -39,6 +39,16 @@
     font-weight:bold;
 }
 
+.carac-name{
+    display:inline;    
+}
+
+.carac-value{
+    font-size:18px;
+    display:inline;
+    float: right;
+}
+
 /* ======================================================= */
 /* AUTRES */
 .formulaire{

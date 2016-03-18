@@ -3,184 +3,195 @@
 <?php
 $idPerso = 0;
 $listePersonnages = array();
-foreach ($listeEncounter as $l){
+foreach ($listeEncounter as $k=>$l){
     echo '
-    <div class="row">
         <div class="col-xs-12">
             <h2 align=center>'.str_replace('_', ' ', $l['nom']).'</h2>
         </div> 
-        <div class="gras col-xs-3 col-xs-offset-2">
+        <div class="gras col-xs-6">
             <ul class="list-group">
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['CC'].'</span>
-                    Capacité de Combat
+                    <span class="badge alert-success"></span>
+                    <p class="carac-name">Capacité de Combat</p>
+                    <p class="carac-value">'.$l['CC'].'</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['CT'].'</span>
-                    Capacité de Tir
+                    <p class="carac-name">Capacité de Tir</p>
+                    <p class="carac-value">'.$l['CT'].'</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">';
+                    <p class="carac-value">';
     if ($l["typeA"] == "nrj")
         echo ($l['F']+20);
     else
         echo $l['F'];
-                    echo '</span>
-                    Force
+                    echo '</p>
+                    <p class="carac-name">Force</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['E'].'</span>
-                    Endurance
+                    <p class="carac-name">Endurance</p>
+                    <p class="carac-value">'.$l['E'].'</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['Ag'].'</span>
-                    Agilité
+                    <p class="carac-name">Agilité</p>
+                    <p class="carac-value">'.$l['Ag'].'</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['Int'].'</span>
-                    Intélligence
+                    <p class="carac-name">Intélligence</p>
+                    <p class="carac-value">'.$l['Int'].'</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['Per'].'</span>
-                    Percéption
+                    <p class="carac-name">Percéption</p>
+                    <p class="carac-value">'.$l['Per'].'</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['FM'].'</span>
-                    Force Mentale
+                    <p class="carac-name">Force Mentale</p>
+                    <p class="carac-value">'.$l['FM'].'</p>
                 </li>
                 <li class="list-group-item">
-                    <span class="badge alert-success">'.$l['Soc'].'</span>
-                    Sociabilité
+                    <p class="carac-name">Sociabilité</p>
+                    <p class="carac-value">'.$l['Soc'].'</p>
                 </li>
             </ul>
         </div>        
-            <div class="armor col-xs-4 col-xs-offset-1">               
-                <div class="row">
-                    <div class="col-xs-4">
-                    </div>     
-                    <div class="well col-xs-4">
-                        TETE <p class="text-armor">'.$l["PA_tete"].'</p>
-                        <p class="text-armor-type">type : '.$l["typeA"].'</p>
-                    </div>     
-                    <div class="col-xs-4">
-                    </div>
-                </div>        
-                <div class="row">            
-                    <div class="well col-xs-4">
-                        BRAS DROIT <p class="text-armor">'.$l["PA_bd"].'</p>
-                        <p class="text-armor-type">type : '.$l["typeA"].'</p>
-                    </div>     
-                    <div class="col-xs-4">
-                    </div>     
-                    <div class="well col-xs-4">
-                        BRAS GAUCHE <p class="text-armor">'.$l["PA_bg"].'</p>
-                        <p class="text-armor-type">type : '.$l["typeA"].'</p>
-                    </div>     
+        <div class="armor col-xs-4 col-xs-offset-1">               
+            <div class="row">
+                <div class="col-xs-4">
+                </div>     
+                <div class="well col-xs-4">
+                    TETE <p class="text-armor">'.$l["PA_tete"].'</p>
+                    <p class="text-armor-type">type : '.$l["typeA"].'</p>
+                </div>     
+                <div class="col-xs-4">
+                </div>
+            </div>        
+            <div class="row">            
+                <div class="well col-xs-4">
+                    BRAS DROIT <p class="text-armor">'.$l["PA_bd"].'</p>
+                    <p class="text-armor-type">type : '.$l["typeA"].'</p>
+                </div>     
+                <div class="col-xs-4">
+                </div>     
+                <div class="well col-xs-4">
+                    BRAS GAUCHE <p class="text-armor">'.$l["PA_bg"].'</p>
+                    <p class="text-armor-type">type : '.$l["typeA"].'</p>
+                </div>     
+            </div>  
+            <div class="row">         
+                <div class="col-xs-4">
+                </div>     
+                <div class="well col-xs-4">
+                    CORPS <p class="text-armor">'.$l["PA_corps"].'</p>
+                    <p class="text-armor-type">type : '.$l["typeA"].'</p>
+                </div>     
+                <div class="col-xs-4">
+                </div>     
+            </div>    
+            <div class="row">
+                <div class="well col-xs-4">
+                    JAMBE DROITE <p class="text-armor">'.$l["PA_jd"].'</p>
+                    <p class="text-armor-type">type : '.$l["typeA"].'</p>
+                </div>     
+                <div class="col-xs-4">
+                    </br>
+                    <span class="label label-danger">B.E : '.floor(($l['E']/10))*($l['ES']).'</span>
+                    </br>
+                    </br>
+                    <span class="label label-danger">B.F : '.floor(($l['F']/10))*($l['FS']).'</span>
+                </div>     
+                <div class="well col-xs-4">
+                    JAMBE GAUCHE <p class="text-armor">'.$l["PA_jg"].'</p>
+                    <p class="text-armor-type">type : '.$l["typeA"].'</p>
                 </div>  
-                <div class="row">         
-                    <div class="col-xs-4">
-                    </div>     
-                    <div class="well col-xs-4">
-                        CORPS <p class="text-armor">'.$l["PA_corps"].'</p>
-                        <p class="text-armor-type">type : '.$l["typeA"].'</p>
-                    </div>     
-                    <div class="col-xs-4">
-                    </div>     
-                </div>    
-                <div class="row">
-                    <div class="well col-xs-4">
-                        JAMBE DROITE <p class="text-armor">'.$l["PA_jd"].'</p>
-                        <p class="text-armor-type">type : '.$l["typeA"].'</p>
-                    </div>     
-                    <div class="col-xs-4">
-                        </br>
-                        <span class="label label-danger">B.E : '.floor(($l['E']/10))*($l['ES']).'</span>
-                        </br>
-                        </br>
-                        <span class="label label-danger">B.F : '.floor(($l['F']/10))*($l['FS']).'</span>
-                    </div>     
-                    <div class="well col-xs-4">
-                        JAMBE GAUCHE <p class="text-armor">'.$l["PA_jg"].'</p>
-                        <p class="text-armor-type">type : '.$l["typeA"].'</p>
-                    </div>  
-                </div> 
-                <div class="row">    
-                </div> 
-            </div>     
-        </div>     
-    </div>  
-    <div class="row col-xs-10 col-xs-offset-1">
-        <div class="col-xs-4">  
-            <div class="panel-group">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#talents">Traits/Talents</a>
-                        </h4>
-                    </div>
-                    <div id="talents" class="panel-collapse collapse in">
-                        <ul class="list-group">';
-        if (!empty($l["talents"])){
-            foreach($l["talents"] as $val){ 
-                echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$descriptionTalents[$val].'">'.$listeTalents[$val].'</li>';
+            </div> 
+        </div>  
+        <div class="col-xs-12">
+            <div class="col-xs-3">  
+                <div class="panel-group">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#traits'.$k.'">Traits</a>
+                            </h4>
+                        </div>
+                        <div id="traits'.$k.'" class="panel-collapse collapse">
+                            <ul class="list-group">';
+            if (!empty($l["traits"])){
+                foreach($l["traits"] as $val){ 
+                    echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$descriptionTraits[$val].'">'.$listeTraits[$val].'</li>';
+                }
             }
-        }
-        if (!empty($l["traits"])){
-            foreach($l["traits"] as $val){ 
-                echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$descriptionTraits[$val].'">'.$listeTraits[$val].'</li>';
-            }
-        }
-        echo '
-                        </ul> 
+            echo '
+                            </ul> 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-4">  
-            <div class="panel-group">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#competences">Notes</a>
-                        </h4>
-                    </div>
-                    <div id="competences" class="panel-collapse collapse in">
-                        <ul class="list-group">';
-        if (!empty($l["competences"])){
-            foreach($l["competences"] as $key=>$val){ 
-                echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$val.'">'.$key.'</li>';
+            <div class="col-xs-3">  
+                <div class="panel-group">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#talents'.$k.'">Traits/Talents</a>
+                            </h4>
+                        </div>
+                        <div id="talents'.$k.'" class="panel-collapse collapse">
+                            <ul class="list-group">';
+            if (!empty($l["talents"])){
+                foreach($l["talents"] as $val){ 
+                    echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$descriptionTalents[$val].'">'.$listeTalents[$val].'</li>';
+                }
             }
-        }
-        echo '
-                        </ul> 
+            echo '
+                            </ul> 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div> 
-        <div class="col-xs-4">  
-            <div class="panel-group">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#pouvoirs">Pouvoirs</a>
-                        </h4>
-                    </div>
-                    <div id="pouvoirs" class="panel-collapse collapse in">
-                        <ul class="list-group">';
-        if (!empty($l["pouvoirs"])){
-            foreach($l["pouvoirs"] as $key=>$val){ 
-                echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$val.'">'.$key.'</li>';
+            <div class="col-xs-3">  
+                <div class="panel-group">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#competences'.$k.'">Notes</a>
+                            </h4>
+                        </div>
+                        <div id="competences'.$k.'" class="panel-collapse collapse">
+                            <ul class="list-group">';
+            if (!empty($l["competences"])){
+                foreach($l["competences"] as $key=>$val){ 
+                    echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$val.'">'.$key.'</li>';
+                }
             }
-        }
-        echo '
-                        </ul> 
+            echo '
+                            </ul> 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>    
-    </div>  
-    <div class="row">
-        <div class="col-xs-10 col-xs-offset-1"> 
+            </div> 
+            <div class="col-xs-3">  
+                <div class="panel-group">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#pouvoirs'.$k.'">Pouvoirs</a>
+                            </h4>
+                        </div>
+                        <div id="pouvoirs'.$k.'" class="panel-collapse collapse">
+                            <ul class="list-group">';
+            if (!empty($l["pouvoirs"])){
+                foreach($l["pouvoirs"] as $key=>$val){ 
+                    echo '          <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="'.$val.'">'.$key.'</li>';
+                }
+            }
+            echo '
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>  
+        <div class="col-xs-12"> 
             <table class="table table-bordered">            
                 <thead>
                     <tr>
@@ -219,9 +230,7 @@ foreach ($listeEncounter as $l){
                 </tbody>
             </table>
         </div>
-    </div>  
-    <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
+        <div class="col-xs-12">
             <div class="CSSTableGenerator">
                 <table class="creatureTable">
                     <tr>
@@ -229,11 +238,13 @@ foreach ($listeEncounter as $l){
                         <td>Pv</td>
                         <td>Degats</td>
                     </tr>';
+        $mob_number = 0;
         for($i = 1 ; $i <= $l['nbGen'] ; $i++){
             $idPerso++;
+            $mob_number++;
             echo '
                         <tr id="'.$idPerso.'">
-                            <td>'.$idPerso.'</td>
+                            <td>'.$l['nom'].' n°'.$mob_number.'</td>
                             <td name="pv" class="gras">'.$l['PV'].'</td>
                             <td><input type="number" class="form-control" name="dmg" value="0" min="-100" max="200"></td>
                         </tr>';
@@ -252,17 +263,19 @@ foreach ($listeEncounter as $l){
         }
         echo '
                 </table>
-            </div>
-        </div>
-    </div>';
+            </div>  
+        </div>';
 }
 $listePersonnages = json_encode($listePersonnages);
 ?>
-</div>
-<a href="<?php echo base_url().'index.php/home/finRencontre'; ?>"><button class="btn btn-lg btn-danger pull-right">Fin de la rencontre</button></a>
-<button class="btn btn-lg btn-success" onClick="majPV()">Calculs</button>
-            
-<script type="text/javascript">
+<a href="<?php echo base_url().'index.php/home/finRencontre'; ?>"><button class="btn btn-lg btn-danger btn-block">Fin de la rencontre</button></a>
+<button class="btn btn-lg btn-success" style="
+                                                position:fixed;
+                                                left:1%;
+                                                top:7%;
+                                              " onClick="majPV()">Calculs</button>
+</div>   
+<script type="text/javascript">    
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
