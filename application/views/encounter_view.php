@@ -268,7 +268,9 @@ foreach ($listeEncounter as $k=>$l){
 }
 $listePersonnages = json_encode($listePersonnages);
 ?>
+</div>
 <a href="<?php echo base_url().'index.php/home/finRencontre'; ?>"><button class="btn btn-lg btn-danger btn-block">Fin de la rencontre</button></a>
+    
 <button class="btn btn-lg btn-success" style="
                                                 position:fixed;
                                                 left:1%;
