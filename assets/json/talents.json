@@ -1,0 +1,967 @@
+[
+  {
+    "id": 1,
+    "nom": "Agilité féline",
+    "description": "Chute => test Ag => réduit la distance de chute de BA mètres"
+  },
+  {
+    "id": 2,
+    "nom": "Aide électrique",
+    "description": "Contact machine alimentée ou batterie => test Endu +10 => diminie 1 Fatigue, +1 par degrès réussite"
+  },
+  {
+    "id": 3,
+    "nom": "Ambidextrie",
+    "description": "Pas de malus si attaque unique avec la main non directrice et -10 si combat à deux armes"
+  },
+  {
+    "id": 4,
+    "nom": "Âme noire",
+    "description": "Ne subit que la moitié du malus d'un test de malignité"
+  },
+  {
+    "id": 5,
+    "nom": "Armure de mépris",
+    "description": "Réduit gains corruption de 1, peut faire test FM pour ignorer effet corruption pdt 1 round"
+  },
+  {
+    "id": 6,
+    "nom": "Assaut acharné",
+    "description": "Si attaque à outrance => peut utiliser la réaction pour 1 attque supplémentaire"
+  },
+  {
+    "id": 7,
+    "nom": "Assommement",
+    "description": "Demi-action => si au moins 1 dmg => ignore dmg => test Endu sinon assomé pdt 1 round"
+  },
+  {
+    "id": 8,
+    "nom": "Attaque éclair",
+    "description": "Action complète => trois attaques au CAC"
+  },
+  {
+    "id": 9,
+    "nom": "Attaque rapide",
+    "description": "Action complète => deux attaques au CAC"
+  },
+  {
+    "id": 10,
+    "nom": "Attraction ferrique",
+    "description": "Action complète => test FM => Attire objet non fixé <1Kg par BFM, portée 20m"
+  },
+  {
+    "id": 11,
+    "nom": "Aura d'autorité",
+    "description": "Test commandement peut affecter 1d10 +BSoc cibles, peut donner ordres péons mais malus -10"
+  },
+  {
+    "id": 12,
+    "nom": "Autosanguin",
+    "description": "toujours légèrement blessé, guérri 2Pv par jour"
+  },
+  {
+    "id": 13,
+    "nom": "Aux portes de l'enfer",
+    "description": "Immunité des sbires à la peur et à l'effroi"
+  },
+  {
+    "id": 14,
+    "nom": "Biceps saillants",
+    "description": "Peut utiliser arme lourde sans se caler"
+  },
+  {
+    "id": 15,
+    "nom": "Blasé",
+    "description": "Ignore les points de folie à la vue du sang ou autre"
+  },
+  {
+    "id": 16,
+    "nom": "Bon tireur",
+    "description": "Pas de malus de portée longue ou extrême"
+  },
+  {
+    "id": 17,
+    "nom": "Bonne réputation(Arbites)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 18,
+    "nom": "Bonne réputation(Mechanicus)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 19,
+    "nom": "Bonne réputation(Administratum)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 20,
+    "nom": "Bonne réputation(Aliénés)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 21,
+    "nom": "Bonne réputation(Atropathes)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 22,
+    "nom": "Bonne réputation(Classes moyennes)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 23,
+    "nom": "Bonne réputation(Ecclésiarchie)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 24,
+    "nom": "Bonne réputation(Hors-monde)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 25,
+    "nom": "Bonne réputation(Gouvernement)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 26,
+    "nom": "Bonne réputation(Inquisition)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 27,
+    "nom": "Bonne réputation(Militaire)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 28,
+    "nom": "Bonne réputation(Mondes sauvages)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 29,
+    "nom": "Bonne réputation(Noblesse)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 30,
+    "nom": "Bonne réputation(Ouvriers)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 31,
+    "nom": "Bonne réputation(Pègres)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 32,
+    "nom": "Bonne réputation(Ruches)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 33,
+    "nom": "Bonne réputation(Universitaire)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable Pair"
+  },
+  {
+    "id": 34,
+    "nom": "Cache énergétique",
+    "description": "Pas de fatigue avec les talents luminen"
+  },
+  {
+    "id": 35,
+    "nom": "Cavité cachée",
+    "description": "Cache un petit objet, fouille malus -10, si appareil +10"
+  },
+  {
+    "id": 36,
+    "nom": "Charge de berserker",
+    "description": "Charge confère +20 en CC"
+  },
+  {
+    "id": 37,
+    "nom": "Charge luminen",
+    "description": "Recharge une machine, dure 1min, malus en fonction de la complexité, gagne 1 niveau de fatigue si test E raté"
+  },
+  {
+    "id": 38,
+    "nom": "Chimiocastration",
+    "description": "Resiste au charisme (+1 cran de difficulté), gagne 1 point de folie"
+  },
+  {
+    "id": 39,
+    "nom": "Choc luminen",
+    "description": "CT ou saisie => 1d10+3 dégats, gagne 1 niveau de fatigue si test E raté"
+  },
+  {
+    "id": 40,
+    "nom": "Cible rapide",
+    "description": "Charge ou course => malus -20 pour vous toucher"
+  },
+  {
+    "id": 41,
+    "nom": "Combat à deux armes (CAC)",
+    "description": "Action complète => attaque avec deux armes => malus -20, si ambidextrie => -10"
+  },
+  {
+    "id": 42,
+    "nom": "Combat à deux armes (TIR)",
+    "description": "Action complète => attaque avec deux armes => malus -20, si ambidextrie => -10"
+  },
+  {
+    "id": 43,
+    "nom": "Combat Aveugle",
+    "description": "Pas de malus en environnement qui gène la vue (brouillard, fumée, pénombre)"
+  },
+  {
+    "id": 44,
+    "nom": "Combat de rue",
+    "description": "Si dégats critique avec mains nues ou couteau => +2 dmg"
+  },
+  {
+    "id": 45,
+    "nom": "Constitution solide",
+    "description": "+1 PV"
+  },
+  {
+    "id": 46,
+    "nom": "Contre-attaque",
+    "description": "Si parade => réaction d'attaque avec l'arme utilisée pour la parade avec malus -20"
+  },
+  {
+    "id": 47,
+    "nom": "Conversion du corpus",
+    "description": "Perd définitivement 1pts Endu => ajoute 1d10 au jet de puissance, peut sacrifier BFM pts Endu par round"
+  },
+  {
+    "id": 48,
+    "nom": "Convocation ferrique",
+    "description": "Action complète => test FM => Attire objet non fixé <2Kg par BFM, portée 40m"
+  },
+  {
+    "id": 49,
+    "nom": "Coup assassin",
+    "description": "Si attaque CAC, peut test acrobatie => demi-déplacement gratuit et protégé"
+  },
+  {
+    "id": 50,
+    "nom": "Coup double",
+    "description": "Action complète => frappe à deux armes => 1 seul test pour toucher ou éviter, peut viser, BE compte 1 seule fois"
+  },
+  {
+    "id": 51,
+    "nom": "Coup handicapant",
+    "description": "Si dégats critiques CAC => 1d5-1 dmg supplémentaires"
+  },
+  {
+    "id": 52,
+    "nom": "Coup précis",
+    "description": "Pas de malus pour les coups ciblés CAC"
+  },
+  {
+    "id": 53,
+    "nom": "Coup écrasant",
+    "description": "+2 dmg CAC"
+  },
+  {
+    "id": 54,
+    "nom": "Coup infaillible",
+    "description": "Peut inverser le résultat du jet de localisation de dmg CAC"
+  },
+  {
+    "id": 55,
+    "nom": "Décadence",
+    "description": "Ne perd connaissance que si rate jet Endu plus de fois que 2xBE, +10 pour utiliser des drogues pdt 24h"
+  },
+  {
+    "id": 56,
+    "nom": "Désarmement",
+    "description": "Action complète => CC opposée => désarme, si 3 degrès réussite => arme hors d'atteinte"
+  },
+  {
+    "id": 57,
+    "nom": "Discipline",
+    "description": "+2 aux jets de puissance à la discipline choisie"
+  },
+  {
+    "id": 58,
+    "nom": "Discipline de fer",
+    "description": "Si dans le champ de vision, vos alliés sous votre commandement peuvent relancer FM raté, peur et effroi"
+  },
+  {
+    "id": 59,
+    "nom": "Double équipier",
+    "description": "+10 test de CC avec un allié, +20 si les deux ont ce talent, cumulable surnombre"
+  },
+  {
+    "id": 60,
+    "nom": "Elu du warp",
+    "description": "Si phénomène psychique => deux jets => garde le plus favorable"
+  },
+  {
+    "id": 61,
+    "nom": "Endurci",
+    "description": "Toujours considéré comme légèrement blessé"
+  },
+  {
+    "id": 62,
+    "nom": "Explosion luminen",
+    "description": "CT <10m => 1d10+BFM dégats, gagne 1 niveau de fatigue si test E raté"
+  },
+  {
+    "id": 63,
+    "nom": "Fidèle aliéné",
+    "description": "Si Peur => Choc => deux jets => garde le plus favorable"
+  },
+  {
+    "id": 64,
+    "nom": "Fin tireur",
+    "description": "Pas de malus pour les coups ciblés distants"
+  },
+  {
+    "id": 65,
+    "nom": "Flagellant",
+    "description": "20min => 1dmg => +10 tests FM pour resister controle mentale ou malignité"
+  },
+  {
+    "id": 66,
+    "nom": "Foi inébranlable",
+    "description": "Relance tests FM (peur) ratés"
+  },
+  {
+    "id": 67,
+    "nom": "Forte tête",
+    "description": "Relance tests FM (pouvoirs psychiques) ratés"
+  },
+  {
+    "id": 68,
+    "nom": "Forteresse mentale",
+    "description": "Cible attaque psychique => si resiste => pysker subit 1d10+BFM dmg, ignore armure et BE"
+  },
+  {
+    "id": 69,
+    "nom": "Frénésie",
+    "description": "Préparation 1 round => +10 CC,F,E,FM, -20 CT et Int, doit attaquer le + proche, ne peut pas fuir ou parer, attaque à outrance, immun CC..., ne peut pas utiliser des pouvoirs"
+  },
+  {
+    "id": 70,
+    "nom": "Grâce levmag",
+    "description": "Demi-action => flotte  à 20-30cm du sol pdt 1d10+BE minutes, 1 demi action pour maintenir l'effet, réduit dmg chutte à 1d10+3, pas plus de 1 fois par 12h"
+  },
+  {
+    "id": 71,
+    "nom": "Grand orateur",
+    "description": "Tests de sociabilités affectent 10x plus de monde"
+  },
+  {
+    "id": 72,
+    "nom": "Grand praticien",
+    "description": "+10 médicae, rend 2 pv si gravement ou mortellement blessé, +20 pour ne pas perdre un membre"
+  },
+  {
+    "id": 73,
+    "nom": "Grésillement strident",
+    "description": "30m, test FM => perd 1 demi-action, frissone... , attendre 1d5 round avant de répéter"
+  },
+  {
+    "id": 74,
+    "nom": "Haine",
+    "description": "+10 test CC conernants la cible de la haine"
+  },
+  {
+    "id": 75,
+    "nom": "Imitation",
+    "description": "Même langue + même race => l'écoutant doit réussir test psuchologie -10"
+  },
+  {
+    "id": 76,
+    "nom": "Litanie de haine",
+    "description": "Test charisme => étend effet haine à BSoc alliés"
+  },
+  {
+    "id": 77,
+    "nom": "Logis-implant",
+    "description": "Réation => +10 CC,CT, gagne 1 de fatigue"
+  },
+  {
+    "id": 78,
+    "nom": "Maître d'armes",
+    "description": "Attaque couteau et épée => relance test CC raté"
+  },
+  {
+    "id": 79,
+    "nom": "Maître du combat",
+    "description": "Annule effet surnombre"
+  },
+  {
+    "id": 80,
+    "nom": "Méditation",
+    "description": "10min => test FM => retire 1 de fatigue"
+  },
+  {
+    "id": 81,
+    "nom": "Mur d'acier",
+    "description": "1 réaction de parade en +, ne peut pas parer deux fois la même attaque"
+  },
+  {
+    "id": 82,
+    "nom": "Nerfs d'acier",
+    "description": "Relance test d'effroi raté"
+  },
+  {
+    "id": 83,
+    "nom": "NP1",
+    "description": "Niveau Psy 1"
+  },
+  {
+    "id": 84,
+    "nom": "NP2",
+    "description": "Niveau Psy 2"
+  },
+  {
+    "id": 85,
+    "nom": "NP3",
+    "description": "Niveau Psy 3"
+  },
+  {
+    "id": 86,
+    "nom": "NP4",
+    "description": "Niveau Psy 4"
+  },
+  {
+    "id": 87,
+    "nom": "NP5",
+    "description": "Niveau Psy 5"
+  },
+  {
+    "id": 88,
+    "nom": "NP6",
+    "description": "Niveau Psy 6"
+  },
+  {
+    "id": 89,
+    "nom": "NP7",
+    "description": "Niveau Psy 7"
+  },
+  {
+    "id": 90,
+    "nom": "NP8",
+    "description": "Niveau Psy 8"
+  },
+  {
+    "id": 91,
+    "nom": "NP9",
+    "description": "Niveau Psy 9"
+  },
+  {
+    "id": 92,
+    "nom": "Orthoproxy",
+    "description": "+20 test FM pour resister aux interrogatoires"
+  },
+  {
+    "id": 93,
+    "nom": "Pair(Arbites)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 94,
+    "nom": "Pair(Mechanicus)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 95,
+    "nom": "Pair(Administratum)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 96,
+    "nom": "Pair(Aliénés)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 97,
+    "nom": "Pair(Atropathes)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 98,
+    "nom": "Pair(Classes moyennes)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 99,
+    "nom": "Pair(Ecclésiarchie)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 100,
+    "nom": "Pair(Hors-monde)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 101,
+    "nom": "Pair(Gouvernement)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 102,
+    "nom": "Pair(Inquisition)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 103,
+    "nom": "Pair(Militaire)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 104,
+    "nom": "Pair(Mondes sauvages)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 105,
+    "nom": "Pair(Noblesse)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 106,
+    "nom": "Pair(Ouvriers)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 107,
+    "nom": "Pair(Pègres)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 108,
+    "nom": "Pair(Ruches)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 109,
+    "nom": "Pair(Universitaire)",
+    "description": "+10 tests sociabilités avec ce groupe, cumulable bonne réputation"
+  },
+  {
+    "id": 110,
+    "nom": "Parade de projectiles",
+    "description": "Peut parer les projectiles primitifs"
+  },
+  {
+    "id": 111,
+    "nom": "Paranoïa",
+    "description": "+2 initiative, + parano !"
+  },
+  {
+    "id": 112,
+    "nom": "Pas de côté",
+    "description": "1 réaction de parade en +, ne peut pas parer deux fois la même attaque"
+  },
+  {
+    "id": 113,
+    "nom": "Pistolero",
+    "description": "Si arme de poing dans chaque main => réduire malus visé de 10"
+  },
+  {
+    "id": 114,
+    "nom": "Prémonition",
+    "description": "Réflechir 10 min => +10 test Int"
+  },
+  {
+    "id": 115,
+    "nom": "Prosanguin",
+    "description": "1 fois toutes les 12h => test technomaitrise (+10min) => récupère 1d5 pv, échec critique => implants down pdt 1semaine"
+  },
+  {
+    "id": 116,
+    "nom": "Puits de pouvoir",
+    "description": "+1 aux jets de puissance"
+  },
+  {
+    "id": 117,
+    "nom": "Purification",
+    "description": "-20 pour éviter tire de lance-flamme"
+  },
+  {
+    "id": 118,
+    "nom": "Quelconque",
+    "description": "-20 pour se faire remarquer ou se souvenir d'un détail"
+  },
+  {
+    "id": 119,
+    "nom": "Rage guerrière",
+    "description": "Peut prarer pdt la frénésie"
+  },
+  {
+    "id": 120,
+    "nom": "Rage Mentale",
+    "description": "Peut utiliser des pouvoirs psy pdt la frénésie"
+  },
+  {
+    "id": 121,
+    "nom": "Réaction rapide",
+    "description": "Si surpris => test Ag => peut agir normalement"
+  },
+  {
+    "id": 122,
+    "nom": "Rechargement rapide",
+    "description": "divise le temps de rechargement par deux"
+  },
+  {
+    "id": 123,
+    "nom": "Réflexe éclair",
+    "description": "Initiative => BAx2"
+  },
+  {
+    "id": 124,
+    "nom": "Résistance(chaleur)",
+    "description": "+10 test pour resister à l'effet"
+  },
+  {
+    "id": 125,
+    "nom": "Résistance(froid)",
+    "description": "+10 test pour resister à l'effet"
+  },
+  {
+    "id": 126,
+    "nom": "Résistance(peur)",
+    "description": "+10 test pour resister à l'effet"
+  },
+  {
+    "id": 127,
+    "nom": "Résistance(poison)",
+    "description": "+10 test pour resister à l'effet"
+  },
+  {
+    "id": 128,
+    "nom": "Résistance(pouvoirs psy)",
+    "description": "+10 test pour resister à l'effet"
+  },
+  {
+    "id": 129,
+    "nom": "Résistance physique",
+    "description": "Réduit de moitié les dégats critiques subits"
+  },
+  {
+    "id": 130,
+    "nom": "Résonance binaire",
+    "description": "+10 pour donner ordres à un serviteur"
+  },
+  {
+    "id": 131,
+    "nom": "Rite de crainte",
+    "description": "50m => humains => test FM => -10 prochain test, dure 2min"
+  },
+  {
+    "id": 132,
+    "nom": "Rite de l'armurier",
+    "description": "10m => action complète => désenraye BInt armes"
+  },
+  {
+    "id": 133,
+    "nom": "Rite de pensée pure",
+    "description": "Immunisé Peur et Effroi"
+  },
+  {
+    "id": 134,
+    "nom": "Rite de peur",
+    "description": "2min =>Gagne le trait Peur(1), visible sur 50m"
+  },
+  {
+    "id": 135,
+    "nom": "Sans peur",
+    "description": "Immunisé peur et effroi, test FM poru quitter l'affrontement"
+  },
+  {
+    "id": 136,
+    "nom": "Sens aiguisés (vue)",
+    "description": "+10 tests liés à ce sens"
+  },
+  {
+    "id": 137,
+    "nom": "Sens aiguisés (ouie)",
+    "description": "+10 tests liés à ce sens"
+  },
+  {
+    "id": 138,
+    "nom": "Sens aiguisés (toucher)",
+    "description": "+10 tests liés à ce sens"
+  },
+  {
+    "id": 139,
+    "nom": "Sens aiguisés (goût)",
+    "description": "+10 tests liés à ce sens"
+  },
+  {
+    "id": 140,
+    "nom": "Sens aiguisés (odorat)",
+    "description": "+10 tests liés à ce sens"
+  },
+  {
+    "id": 141,
+    "nom": "Sommeil léger",
+    "description": "Considéré comme éveillé si vigilance, mais montre signe fatigue et grognon"
+  },
+  {
+    "id": 142,
+    "nom": "Souvenir précis",
+    "description": "Se souvient de tout, peut faire test Int pour que le MJ réponde"
+  },
+  {
+    "id": 143,
+    "nom": "Sprint",
+    "description": "Déplacement complet => 1xBA de plus, Course => doublement de la distance, 1 de fatigue si 2 tours de suite"
+  },
+  {
+    "id": 144,
+    "nom": "Sur ses gardes",
+    "description": "Peut utiliser réactivité gratuitement pour armes de poings,base et CAC à 1 main"
+  },
+  {
+    "id": 145,
+    "nom": "Talentueux",
+    "description": "+10 aux test de cette compétence"
+  },
+  {
+    "id": 146,
+    "nom": "Technoharmonisation",
+    "description": "Demi-action => désenraye une arme par round"
+  },
+  {
+    "id": 147,
+    "nom": "Tir double",
+    "description": "Action complète => frappe à deux armes => 1 seul test pour toucher ou éviter, peut viser, BE compte 1 seule fois"
+  },
+  {
+    "id": 148,
+    "nom": "Tir en mouvement",
+    "description": "Action complète => déplacement complet + attaque arme de poing"
+  },
+  {
+    "id": 149,
+    "nom": "Tir en puissance",
+    "description": "+2 dmg avec arme à distance"
+  },
+  {
+    "id": 150,
+    "nom": "Tireur chevronné",
+    "description": "Si dégats critiques => +2 dmg suppl"
+  },
+  {
+    "id": 151,
+    "nom": "Tireur émérite",
+    "description": "Peut utiliser des armes à distance sans la formation pour -10 au lieu de -20"
+  },
+  {
+    "id": 152,
+    "nom": "Tireur hors pair",
+    "description": "Coup ciblé => malus -10 au lieu de -20"
+  },
+  {
+    "id": 153,
+    "nom": "Transcendance levmag",
+    "description": "Demi-action => flotte  à 20-30cm du sol pdt 2d10+BE minutes, 1 demi action pour maintenir l'effet, réduit dmg chutte à 0, pas plus de 1 fois par 12h"
+  },
+  {
+    "id": 154,
+    "nom": "Trompe-la-mort",
+    "description": "Deux jets pour éviter la mort si hémorragie"
+  },
+  {
+    "id": 155,
+    "nom": "Utilisation d'électro-implant",
+    "description": "+10 test CG, Enquête et Technomaîtrise, si connecté"
+  },
+  {
+    "id": 156,
+    "nom": "Utilisation de mécadendrites",
+    "description": "Peut utiliser des méchadendrites"
+  },
+  {
+    "id": 157,
+    "nom": "Vigoureux",
+    "description": "Si assomé => test Endu pour ne pas l'être"
+  },
+  {
+    "id": 158,
+    "nom": "Visée indépendante",
+    "description": "Peut tirer sur deux cibles séparées de plus de 10m"
+  },
+  {
+    "id": 159,
+    "nom": "Vivacité",
+    "description": "Peut se relever gratuitement"
+  },
+  {
+    "id": 160,
+    "nom": "Voix troublante",
+    "description": "+10 test d'interrogatoire et d'intimidation sur la voix, -10 tests Socia avec gens sensibles"
+  },
+  {
+    "id": 161,
+    "nom": "Formation aux armes de base (bolts)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 162,
+    "nom": "Formation aux armes de base (fusion)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 163,
+    "nom": "Formation aux armes de base (lance-flamme)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 164,
+    "nom": "Formation aux armes de base (lanceurs)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 165,
+    "nom": "Formation aux armes de base (laser)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 166,
+    "nom": "Formation aux armes de base (MS)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 167,
+    "nom": "Formation aux armes de base (plasma)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 168,
+    "nom": "Formation aux armes de base (primitives)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 169,
+    "nom": "Formation aux armes de CAC (décharge)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 170,
+    "nom": "Formation aux armes de CAC (énergétiques)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 171,
+    "nom": "Formation aux armes de CAC (primitives)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 172,
+    "nom": "Formation aux armes de CAC (tronçonneuses)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 173,
+    "nom": "Formation aux armes de Jet (décharge)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 174,
+    "nom": "Formation aux armes de Jet (énergétiques)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 175,
+    "nom": "Formation aux armes de Jet (primitives)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 176,
+    "nom": "Formation aux armes de Jet (tronçonneuses)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 177,
+    "nom": "Formation aux armes de Poing (bolts)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 178,
+    "nom": "Formation aux armes de Poing (fusion)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 179,
+    "nom": "Formation aux armes de Poing (lance-flamme)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 180,
+    "nom": "Formation aux armes de Poing (lanceurs)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 181,
+    "nom": "Formation aux armes de Poing (laser)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 182,
+    "nom": "Formation aux armes de Poing (MS)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 183,
+    "nom": "Formation aux armes de Poing (plasma)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 184,
+    "nom": "Formation aux armes de Poing (primitives)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 185,
+    "nom": "Formation aux armes exotiques",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 186,
+    "nom": "Formation aux armes Lourdes (bolts)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 187,
+    "nom": "Formation aux armes Lourdes (fusion)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 188,
+    "nom": "Formation aux armes Lourdes (lance-flamme)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 189,
+    "nom": "Formation aux armes Lourdes (lanceurs)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 190,
+    "nom": "Formation aux armes Lourdes (laser)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 191,
+    "nom": "Formation aux armes Lourdes (MS)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 192,
+    "nom": "Formation aux armes Lourdes (plasma)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  },
+  {
+    "id": 193,
+    "nom": "Formation aux armes Lourdes (primitives)",
+    "description": "Forme aux maniements des armes de la catégorie donnée"
+  }
+]

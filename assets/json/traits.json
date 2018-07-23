@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "nom": "Âme liée",
+    "description": "Lié à une entité, Empereur ou Chaos, cf p329"
+  },
+  {
+    "id": 2,
+    "nom": "Armes Naturelles",
+    "description": "Inflige 1d10+BF, ne peut pas parer, attribut primitive"
+  },
+  {
+    "id": 3,
+    "nom": "Armes Warp",
+    "description": "Traverse les armures, sauf si ces dernières sont sanctifiées ou psychiques"
+  },
+  {
+    "id": 4,
+    "nom": "Armure naturelle",
+    "description": "Confère une armure naturelle"
+  },
+  {
+    "id": 5,
+    "nom": "Au-Delà",
+    "description": "Immunisé à la Peur, l'effroi, la Folie ou les pouvoirs pour obscursir, contrôler ou tromper l'esprit"
+  },
+  {
+    "id": 6,
+    "nom": "Autostabilisant",
+    "description": "Armes lourdes toujours calées, automatique et semi-auto ne coute qu'une demi-action"
+  },
+  {
+    "id": 7,
+    "nom": "Aveugle",
+    "description": "Rate tests liés à la vue et les test de CT, malus -30 pour la CC"
+  },
+  {
+    "id": 8,
+    "nom": "Bestial",
+    "description": "Si pas affamée ou acculée => si blessée, suprise, effrayée => test FM => prend la fuite si échec"
+  },
+  {
+    "id": 9,
+    "nom": "Carac Surnaturelle",
+    "description": "Ajoute son multiplicateur aux degrés de réussite et double le bonus de la carac"
+  },
+  {
+    "id": 10,
+    "nom": "Cauchemardesque",
+    "description": "Immun poison, maladie, hémorragies, assommement, effets critique (sauf si provient arme sainte/force/pouvoir)"
+  },
+  {
+    "id": 11,
+    "nom": "Charge Brutale",
+    "description": "+3 dmg si charge"
+  },
+  {
+    "id": 12,
+    "nom": "Cuirasse",
+    "description": "+2 armure partout"
+  },
+  {
+    "id": 13,
+    "nom": "Démoniaque",
+    "description": "BEx2 sauf contre pouvoirs, armes force/sanctifiées ou autre créature démoniaque, immun poison/maladie"
+  },
+  {
+    "id": 14,
+    "nom": "Echolocalisation",
+    "description": "Repère son environnement à 30m, vigilance -10 pour entendre un curieux cri aigu"
+  },
+  {
+    "id": 15,
+    "nom": "Fouisseur",
+    "description": "Peut fouir le sol, roche, sable..."
+  },
+  {
+    "id": 16,
+    "nom": "Immatériel",
+    "description": "+30 Dissimulation si se cache dans qq chose, sensbibles aux pouvoirs, armes force/sanctifiées/warp"
+  },
+  {
+    "id": 17,
+    "nom": "Informe",
+    "description": "Peut se rétracter ou prendre du volume, se déplace à la moitié du BA"
+  },
+  {
+    "id": 18,
+    "nom": "Instabilité Warp",
+    "description": "Si subit des dégats sans pouvoir en causer ou infliger de la Folie à la fin de son tour => FM => si raté => subit 1 dmg +1 par degrès d'échec, si dmg >= pv => renvoyée dans le warp"
+  },
+  {
+    "id": 19,
+    "nom": "Lévitation",
+    "description": "Peut léviter à 2m du sol"
+  },
+  {
+    "id": 20,
+    "nom": "Machine",
+    "description": "Immun vide, froid et effets psychiques mentaux"
+  },
+  {
+    "id": 21,
+    "nom": "Multibras",
+    "description": "Endurance +10 et bonus +10 aux tests Force liés aux déplacements (escalade, natation), peut attaquer 2x"
+  },
+  {
+    "id": 22,
+    "nom": "Nyctalope",
+    "description": "Peut voir parfaitement bien dans l'obscurité'"
+  },
+  {
+    "id": 23,
+    "nom": "Peur(1)",
+    "description": "Test FM +0 => si raté => Choc (p231) +10 par degrès d'échec"
+  },
+  {
+    "id": 24,
+    "nom": "Peur(2)",
+    "description": "Test FM -10 => si raté => Choc (p231) +10 par degrès d'échec"
+  },
+  {
+    "id": 25,
+    "nom": "Peur(3)",
+    "description": "Test FM -20 => si raté => Choc (p231) +10 par degrès d'échec"
+  },
+  {
+    "id": 26,
+    "nom": "Peur(4)",
+    "description": "Test FM -30 => si raté => Choc (p231) +10 par degrès d'échec"
+  },
+  {
+    "id": 27,
+    "nom": "Phase",
+    "description": "Peut acquérir le trait immatériel ou le perdre avec une demi-action"
+  },
+  {
+    "id": 28,
+    "nom": "Physionomie Atypique",
+    "description": "Subit uniquement des dégats sur le corps, meure si pv tombe à 0"
+  },
+  {
+    "id": 29,
+    "nom": "Piétinement",
+    "description": "si rate un test de FM => charge en ligne droite, si pas d'armes => 1d5+Bf pour ceux qui sont sur le passage, passe la panique aux congénères"
+  },
+  {
+    "id": 30,
+    "nom": "Possession",
+    "description": "1AC et qq mètres => FM opposé par round juqu'a 5 degrès échec pour l'un => si entité gagne => possession"
+  },
+  {
+    "id": 31,
+    "nom": "Quadrupède",
+    "description": "BAx2 pour le déplacement si quatre patte, x3 si six pattes, etc."
+  },
+  {
+    "id": 32,
+    "nom": "Régénération",
+    "description": "Début du tour => test Endurance pour éliminer 1 dmg"
+  },
+  {
+    "id": 33,
+    "nom": "Reptation",
+    "description": "Ondule, déplacement = moitié du BA, +10 pour resister saisie et assomement"
+  },
+  {
+    "id": 34,
+    "nom": "Sens Surnaturels",
+    "description": "pas besoin de vue ou d'ouïe, perçoit son environnement à 15m"
+  },
+  {
+    "id": 35,
+    "nom": "Taille(Minuscule)",
+    "description": "Modificateur de visée -30, Dissimulation +30, Déplacement BA-3"
+  },
+  {
+    "id": 36,
+    "nom": "Taille(Très petite)",
+    "description": "Modificateur de visée -20, Dissimulation +20, Déplacement BA-2"
+  },
+  {
+    "id": 37,
+    "nom": "Taille(Petite)",
+    "description": "Modificateur de visée -10, Dissimulation +10, Déplacement BA-1"
+  },
+  {
+    "id": 38,
+    "nom": "Taille(Moyenne)",
+    "description": "Modificateur de visée 0, Dissimulation 0, Déplacement BA"
+  },
+  {
+    "id": 39,
+    "nom": "Taille(Grande)",
+    "description": "Modificateur de visée +10, Dissimulation -10, Déplacement BA+1"
+  },
+  {
+    "id": 40,
+    "nom": "Taille(Imposante)",
+    "description": "Modificateur de visée +20, Dissimulation -20, Déplacement BA+2"
+  },
+  {
+    "id": 41,
+    "nom": "Taille(Impressionante)",
+    "description": "Modificateur de visée +30, Dissimulation -30, Déplacement BA+3"
+  },
+  {
+    "id": 42,
+    "nom": "Toxique",
+    "description": "Si touché ou contaminé => test Endurance => si échec => subit 1d10 dmg ignore armure"
+  },
+  {
+    "id": 43,
+    "nom": "Vitesse surnaturelle",
+    "description": "BAx2"
+  },
+  {
+    "id": 44,
+    "nom": "Vol",
+    "description": "Peut voler"
+  }
+]
